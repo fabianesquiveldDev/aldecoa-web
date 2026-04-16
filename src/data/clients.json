@@ -5,67 +5,76 @@
     {
       "id_client": 1,
       "name": "Volkswagen",
-      "logo": "/images/clients/volkswagen.png"
+      "logo": "/logos/Volkswagen.png"
+      
     },
     {
       "id_client": 2,
       "name": "FEMSA",
-      "logo": "/images/clients/femsa.png"
+      "logo": "/logos/femsa.png"
+     
     },
     {
       "id_client": 3,
       "name": "Sendero Villahermosa",
-      "logo": "/images/clients/sendero.png"
+      "logo": "/logos/Sendero Villahermosa.png"
+      
     },
     {
       "id_client": 4,
       "name": "OXXO",
-      "logo": "/images/clients/oxxo.png"
+      "logo": "/logos/Oxxo.png"
+      
     },
     {
       "id_client": 5,
       "name": "Schlumberger",
-      "logo": "/images/clients/schlumberger.png"
+      "logo": "/logos/Schlumberger.JPEG"
+      
     },
     {
       "id_client": 6,
       "name": "Bieeco",
-      "logo": "/images/clients/bieeco.png"
+      "logo": "/logos/Bieeco.png"
+      
     },
     {
       "id_client": 7,
       "name": "OXXO CEDIS",
-      "logo": "/images/clients/oxxo-cedis.png"
+      "logo": "/logos/Oxxocedis.png"
+
+     
     },
     {
       "id_client": 8,
       "name": "CEUNIV Siglo XXI",
-      "logo": "/images/clients/ceuniv.png"
+      "logo": "/logos/CEUNIV Siglo XXI.png"
+      
     },
     {
       "id_client": 9,
       "name": "Palenque",
-      "logo": "/images/clients/palenque.png"
+      "logo": "/logos/Palenque.png"
     },
     {
       "id_client": 10,
       "name": "Boxito",
-      "logo": "/images/clients/boxito.png"
+      "logo": "/logos/boxito.png"
     },
     {
       "id_client": 11,
       "name": "Totalplay",
-      "logo": "/images/clients/totalplay.png"
+      "logo": "/logos/Totalplay.png"
     },
     {
       "id_client": 12,
       "name": "Italika",
-      "logo": "/images/clients/italika.png"
+      "logo": "/logos/italika.png"
     },
     {
       "id_client": 13,
       "name": "Soriana",
-      "logo": "/images/clients/soriana.png"
+      "logo": "/logos/Soriana.png"
     }
   ]
 }
