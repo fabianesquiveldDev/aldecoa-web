@@ -75,13 +75,13 @@ export default function Footer() {
         <ul className="space-y-4">
 
           <li>
-            <a href="#" className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
+            <a href="/aviso-de-privacidad" className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
               Aviso de privacidad
             </a>
           </li>
 
           <li>
-            <a href="#" className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
+            <a href="/terminos-y-condiciones" className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
               Términos y condiciones
             </a>
           </li>
