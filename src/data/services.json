@@ -1,0 +1,176 @@
+{
+  "servicios": [
+    {
+      "id_seccion": 1,
+      "nombreSeccion": "Marketing & Publicidad",
+      "icon": "directions_car",
+      "servicios": [
+        { "id_servicio": 1, "nombre": "Estrategias 360°" },
+        { "id_servicio": 2, "nombre": "Branding" },
+        { "id_servicio": 3, "nombre": "Plan de medios" },
+        { "id_servicio": 4, "nombre": "Publicidad (radio, TV, espectaculares)" },
+        { "id_servicio": 5, "nombre": "Vallas móviles" },
+        { "id_servicio": 6, "nombre": "Pantallas LED" },
+        { "id_servicio": 7, "nombre": "Perifoneo" },
+        { "id_servicio": 8, "nombre": "Volanteo" },
+        { "id_servicio": 9, "nombre": "Influencers" }
+      ]
+    },
+    {
+      "id_seccion": 2,
+      "nombreSeccion": "Promoción & Activaciones",
+      "icon": "directions_car",
+      "servicios": [
+        { "id_servicio": 10, "nombre": "Activaciones en punto de venta" },
+        { "id_servicio": 11, "nombre": "Promotoría" },
+        { "id_servicio": 12, "nombre": "Degustaciones" },
+        { "id_servicio": 13, "nombre": "Sampling" },
+        { "id_servicio": 14, "nombre": "Dinámicas y concursos" },
+        { "id_servicio": 15, "nombre": "Edecanes" },
+        { "id_servicio": 16, "nombre": "Activaciones móviles" }
+      ]
+    },
+    {
+      "id_seccion": 3,
+      "nombreSeccion": "Eventos & Experiencias",
+      "icon": "directions_car",
+      "servicios": [
+        { "id_servicio": 17, "nombre": "Eventos corporativos" },
+        { "id_servicio": 18, "nombre": "Eventos gubernamentales" },
+        { "id_servicio": 19, "nombre": "Lanzamientos" },
+        { "id_servicio": 20, "nombre": "Producción masiva" },
+        { "id_servicio": 21, "nombre": "Logística de eventos" }
+      ]
+    },
+    {
+      "id_seccion": 4,
+      "nombreSeccion": "Eventos Sociales",
+      "icon": "directions_car",
+      "servicios": [
+        { "id_servicio": 22, "nombre": "Bodas" },
+        { "id_servicio": 23, "nombre": "XV años" },
+        { "id_servicio": 24, "nombre": "Fiestas privadas" },
+        { "id_servicio": 25, "nombre": "Planeación integral" },
+        { "id_servicio": 26, "nombre": "Coordinación total" }
+      ]
+    },
+    {
+      "id_seccion": 5,
+      "nombreSeccion": "Eventos Infantiles",
+      "icon": "directions_car",
+      "servicios": [
+        { "id_servicio": 27, "nombre": "Fiestas temáticas" },
+        { "id_servicio": 28, "nombre": "Shows infantiles" },
+        { "id_servicio": 29, "nombre": "Inflables" },
+        { "id_servicio": 30, "nombre": "Animadores" },
+        { "id_servicio": 31, "nombre": "Pinta caritas" }
+      ]
+    },
+    {
+      "id_seccion": 6,
+      "nombreSeccion": "Entretenimiento & Shows",
+      "icon": "directions_car",
+      "servicios": [
+        { "id_servicio": 32, "nombre": "Shows teatrales" },
+        { "id_servicio": 33, "nombre": "Animación profesional" },
+        { "id_servicio": 34, "nombre": "Personajes y botargas" },
+        { "id_servicio": 35, "nombre": "Producciones especiales" }
+      ]
+    },
+    {
+      "id_seccion": 7,
+      "nombreSeccion": "Producción de Eventos",
+      "icon": "directions_car",
+      "servicios": [
+        { "id_servicio": 36, "nombre": "Teatro" },
+        { "id_servicio": 37, "nombre": "Shows musicales" },
+        { "id_servicio": 38, "nombre": "Conferencias" },
+        { "id_servicio": 39, "nombre": "Artistas" },
+        { "id_servicio": 40, "nombre": "Eventos masivos" }
+      ]
+    },
+    {
+      "id_seccion": 8,
+      "nombreSeccion": "Digital & Redes Sociales",
+      "icon": "directions_car",
+      "servicios": [
+        { "id_servicio": 41, "nombre": "Gestión de redes sociales" },
+        { "id_servicio": 42, "nombre": "Estrategia digital" },
+        { "id_servicio": 43, "nombre": "Campañas online" },
+        { "id_servicio": 44, "nombre": "Creación de contenido" },
+        { "id_servicio": 45, "nombre": "Monitoreo" },
+        { "id_servicio": 46, "nombre": "Cobertura en tiempo real" }
+      ]
+    },
+    {
+      "id_seccion": 9,
+      "nombreSeccion": "Transportación",
+      "icon": "directions_car",
+      "servicios": [
+        { "id_servicio": 47, "nombre": "Vans de 14 a 20 pasajeros" },
+        { "id_servicio": 48, "nombre": "Traslado para eventos y staff" },
+        { "id_servicio": 49, "nombre": "Logística de movilidad" },
+        { "id_servicio": 50, "nombre": "Traslados para giras" }
+      ]
+    },
+    {
+      "id_seccion": 10,
+      "nombreSeccion": "Conferencias & Team Building",
+      "icon": "campaign",
+      "servicios": [
+        { "id_servicio": 51, "nombre": "Conferencias motivacionales" },
+        { "id_servicio": 52, "nombre": "Talleres empresariales" },
+        { "id_servicio": 53, "nombre": "Integración de equipos" },
+        { "id_servicio": 54, "nombre": "Desarrollo humano" },
+        { "id_servicio": 55, "nombre": "Liderazgo y comunicación" }
+      ]
+    },
+    {
+      "id_seccion": 11,
+      "nombreSeccion": "Escenografía & Producción",
+      "icon": "directions_car",
+      "servicios": [
+        { "id_servicio": 56, "nombre": "Diseño de sets y escenografías" },
+        { "id_servicio": 57, "nombre": "Construcción de stands" },
+        { "id_servicio": 58, "nombre": "Producción de props" },
+        { "id_servicio": 59, "nombre": "Experiencias temáticas" },
+        { "id_servicio": 60, "nombre": "Integración de marca en escenarios" }
+      ]
+    },
+    {
+    "id_seccion": 12,
+    "nombreSeccion": "Producción Creativa",
+    "icon": "directions_car",
+    "servicios": [
+      { "id_servicio": 61, "nombre": "Spots de radio y TV" },
+      { "id_servicio": 62, "nombre": "Jingles" },
+      { "id_servicio": 63, "nombre": "Diseño gráfico" },
+      { "id_servicio": 64, "nombre": "Branding visual" },
+      { "id_servicio": 65, "nombre": "Impresión de materiales" }
+        ]
+    },
+    {
+    "id_seccion": 13,
+    "nombreSeccion": "Renta & Servicios para Eventos",
+    "icon": "directions_car",
+    "servicios": [
+      { "id_servicio": 66, "nombre": "Audio profesional" },
+      { "id_servicio": 67, "nombre": "Iluminación" },
+      { "id_servicio": 68, "nombre": "Inflables y juegos" },
+      { "id_servicio": 69, "nombre": "Botargas" },
+      { "id_servicio": 70, "nombre": "Mobiliario" },
+      { "id_servicio": 71, "nombre": "Decoración con globos" },
+      { "id_servicio": 72, "nombre": "Meseros y staff operativo" }
+        ]
+   },
+   {
+    "id_seccion": 14,
+    "nombreSeccion": "Infraestructura Propia",
+    "icon": "directions_car",
+    "servicios": [
+      { "id_servicio": 73, "nombre": "Renta de palapa para eventos" },
+      { "id_servicio": 74, "nombre": "Área con alberca" }
+        ]
+    }
+]
+}

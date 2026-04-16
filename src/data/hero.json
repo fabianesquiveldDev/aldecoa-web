@@ -1,0 +1,24 @@
+
+{
+  "badge": "Agencia de Marketing & Experiencias",
+
+  "title": {
+    "line1": "Creamos",
+    "highlight": "estrategias",
+    "line2": "que se viven."
+  },
+
+  "description": "Somos una agencia integral de marketing y eventos especializada en crear experiencias estratégicas que generan impacto real en tu audiencia.",
+
+  "primary_button": {
+    "label": "Cotizar proyecto",
+    "link": "https://wa.link/46cexs"
+  },
+
+  "secondary_button": {
+    "label": "Ver servicios",
+    "link": "#servicios"
+  },
+
+  "image": "/images/hero/hero.jpg"
+}

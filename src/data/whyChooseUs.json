@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id_whychooseus": "01",
+      "title": "Flexibilidad estratégica",
+      "description": "Adaptamos cada proyecto a las necesidades, objetivos y presupuesto de cada cliente, manteniendo siempre un alto estándar de calidad y creatividad."
+    },
+    {
+      "id_whychooseus": "02",
+      "title": "Impacto visual y emocional",
+      "description": "Diseñamos experiencias memorables que capturan la atención, generan conexión con la audiencia y fortalecen el posicionamiento de marca."
+    },
+    {
+      "id_whychooseus": "03",
+      "title": "Cobertura en el sureste",
+      "description": "Contamos con infraestructura y experiencia operativa en el sureste de México, garantizando ejecución eficiente y resultados consistentes en cada proyecto."
+    }
+  ]
+}

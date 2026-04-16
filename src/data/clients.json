@@ -1,0 +1,71 @@
+{
+  "title": "Marcas que confían en nosotros",
+
+  "items": [
+    {
+      "id_client": 1,
+      "name": "Volkswagen",
+      "logo": "/images/clients/volkswagen.png"
+    },
+    {
+      "id_client": 2,
+      "name": "FEMSA",
+      "logo": "/images/clients/femsa.png"
+    },
+    {
+      "id_client": 3,
+      "name": "Sendero Villahermosa",
+      "logo": "/images/clients/sendero.png"
+    },
+    {
+      "id_client": 4,
+      "name": "OXXO",
+      "logo": "/images/clients/oxxo.png"
+    },
+    {
+      "id_client": 5,
+      "name": "Schlumberger",
+      "logo": "/images/clients/schlumberger.png"
+    },
+    {
+      "id_client": 6,
+      "name": "Bieeco",
+      "logo": "/images/clients/bieeco.png"
+    },
+    {
+      "id_client": 7,
+      "name": "OXXO CEDIS",
+      "logo": "/images/clients/oxxo-cedis.png"
+    },
+    {
+      "id_client": 8,
+      "name": "CEUNIV Siglo XXI",
+      "logo": "/images/clients/ceuniv.png"
+    },
+    {
+      "id_client": 9,
+      "name": "Palenque",
+      "logo": "/images/clients/palenque.png"
+    },
+    {
+      "id_client": 10,
+      "name": "Boxito",
+      "logo": "/images/clients/boxito.png"
+    },
+    {
+      "id_client": 11,
+      "name": "Totalplay",
+      "logo": "/images/clients/totalplay.png"
+    },
+    {
+      "id_client": 12,
+      "name": "Italika",
+      "logo": "/images/clients/italika.png"
+    },
+    {
+      "id_client": 13,
+      "name": "Soriana",
+      "logo": "/images/clients/soriana.png"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "section_tag": "Quiénes somos",
+
+  "title": "Somos más que una agencia. Somos aliados estratégicos.",
+
+  "description": "ALDECOA es una agencia integral de mercadotecnia y eventos especializada en crear experiencias estratégicas que generan impacto real en la audiencia. Trabajamos a través de áreas estratégicas de marketing, creatividad, promoción, medios, digital y social para ofrecer soluciones completas que conectan con las personas y fortalecen el posicionamiento de cada marca.",
+
+  "mission": "Ser el socio estratégico que impulsa el crecimiento de tu negocio mediante estrategias innovadoras, creatividad aplicada y ejecución impecable.",
+
+  "quote": "Creamos experiencias que conectan emocionalmente con la audiencia y generan resultados medibles.",
+
+  "stats": [
+    { 
+      "id": 1,
+      "value": "10+",
+      "label": "Años de experiencia"
+    },
+    {
+      "id": 2,
+      "value": "500+",
+      "label": "Proyectos y eventos"
+    },
+    {
+      "id": 3,
+      "value": "100%",
+      "label": "Cobertura en el sureste"
+    }
+  ],
+
+  "image": "/images/nosotros/equipo.jpg"
+}

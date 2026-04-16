@@ -1,0 +1,90 @@
+{
+  "company": {
+    "name": "ALDECOA",
+    "tagline": "Estrategas de Servicios Integrales",
+    "slogan": "Let's Get Creative",
+    "description": "Somos una agencia integral de mercadotecnia y eventos especializada en crear experiencias estratégicas que generan impacto real en la audiencia.",
+    "mission": "Ser el socio estratégico que impulsa el crecimiento de tu negocio mediante estrategias innovadoras y ejecución impecable."
+  },
+
+  "contact": {
+    "email": "agenciademarketing.aldecoa@gmail.com",
+    "phone_main": "9934618119",
+    "phone_secondary": "9933536634",
+    "whatsapp": "https://wa.link/46cexs"
+  },
+
+  "social": {
+    "facebook": "ALDECOA MKT",
+    "instagram": "",
+    "linkedin": ""
+  },
+
+  "location": {
+    "region": "Sureste de México",
+    "states": [
+      "Tabasco",
+      "Chiapas",
+      "Veracruz",
+      "Campeche",
+      "Yucatán",
+      "Quintana Roo"
+    ]
+  },
+
+  "navigation": [
+    {
+      "label": "Inicio",
+      "href": "#inicio"
+    },
+    {
+      "label": "Nosotros",
+      "href": "#nosotros"
+    },
+    {
+      "label": "Servicios",
+      "href": "#servicios"
+    },
+    {
+      "label": "Clientes",
+      "href": "#clientes"
+    },
+    {
+      "label": "Portfolio",
+      "href": "#portfolio"
+    },
+    {
+      "label": "Contacto",
+      "href": "#contacto"
+    }
+  ],
+
+  "philosophy": [
+    {
+      "title": "Intrépidos al imaginar",
+      "description": "No tememos a ideas audaces que transforman mercados."
+    },
+    {
+      "title": "Excitantes al materializar",
+      "description": "Convertimos visiones en realidades tangibles y medibles."
+    },
+    {
+      "title": "Afables al negociar",
+      "description": "Construimos relaciones duraderas basadas en confianza."
+    }
+  ],
+
+  "seo": {
+    "title": "ALDECOA | Marketing y Eventos en el Sureste de México",
+    "description": "Agencia integral de marketing, activaciones BTL, eventos corporativos y producción audiovisual en el sureste de México.",
+    "keywords": [
+      "marketing BTL",
+      "activaciones de marca",
+      "eventos corporativos",
+      "publicidad mexico",
+      "marketing sureste mexico",
+      "produccion audiovisual",
+      "agencia creativa"
+    ]
+  }
+}
