@@ -27,5 +27,7 @@
     }
   ],
 
-  "image": "/images/nosotros/equipo.jpg"
+  "video": "/nosotros/Aldecoa_historias.mp4",
+
+  "image": "/nosotros/nosotrosLE.jpg"
 }

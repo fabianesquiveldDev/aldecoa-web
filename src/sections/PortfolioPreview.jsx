@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import site from "../data/site.json";
 
 export default function PortfolioPreview() {
@@ -55,15 +56,11 @@ export default function PortfolioPreview() {
         <div className="mb-16">
 
           <h2 className="text-4xl md:text-6xl font-black font-headline text-white uppercase tracking-tighter">
-
             Nuestro trabajo
-
           </h2>
 
           <p className="text-primary font-bold tracking-widest uppercase text-sm mt-4">
-
             Momentos que definen marcas
-
           </p>
 
         </div>
@@ -75,31 +72,26 @@ export default function PortfolioPreview() {
           {proyectos.map((item, index) => (
 
             <div
-
               key={index}
-
               className={`
-
                 relative overflow-hidden bg-surface-container
-
                 ${item.span || ""}
-
                 ${item.ratio}
-
               `}
-
             >
 
               <Image
-
                 src={item.image}
-
-                alt={item.title}
-
+                alt={item.title || item.category}
                 fill
-
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
-
+                className="
+                  object-cover
+                  grayscale
+                  hover:grayscale-0
+                  hover:scale-105
+                  transition-all
+                  duration-700
+                "
               />
 
 
@@ -107,18 +99,13 @@ export default function PortfolioPreview() {
               <div className="absolute bottom-0 left-0 w-full p-4 bg-black/60">
 
                 <p className="text-[10px] font-bold text-primary uppercase">
-
                   {item.category}
-
                 </p>
-
 
                 {item.title && (
 
                   <h5 className="text-xl font-black text-white">
-
                     {item.title}
-
                   </h5>
 
                 )}
@@ -130,6 +117,42 @@ export default function PortfolioPreview() {
           ))}
 
         </div>
+
+
+        {/* boton ver más */}
+        <div className="mt-16 flex justify-center">
+
+          <Link
+  href="/portfolioMas"
+  className="
+    border
+    border-primary
+    text-primary
+
+    px-10
+    py-3
+
+    font-headline
+    font-black
+    tracking-widest
+    uppercase
+    text-sm
+
+    hover:bg-primary
+    hover:text-white
+    hover:-translate-y-1
+
+    transition-all
+    duration-300
+  "
+>
+
+  Ver más proyectos →
+
+</Link>
+
+        </div>
+
 
       </div>
 

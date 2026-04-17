@@ -1,0 +1,32 @@
+{
+  "title": "Estamos donde tu marca necesita estar",
+
+  "description": "Nuestra infraestructura operativa está diseñada para cubrir los estados estratégicos del sureste de México. Operamos con rapidez, eficiencia y coordinación logística para garantizar resultados consistentes en cada proyecto.",
+
+  "states": [
+    {
+      "id_state": 1,
+      "name": "Tabasco"
+    },
+    {
+      "id_state": 2,
+      "name": "Chiapas"
+    },
+    {
+      "id_state": 3,
+      "name": "Veracruz"
+    },
+    {
+      "id_state": 4,
+      "name": "Campeche"
+    },
+    {
+      "id_state": 5,
+      "name": "Yucatán"
+    },
+    {
+      "id_state": 6,
+      "name": "Quintana Roo"
+    }
+  ]
+}

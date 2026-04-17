@@ -1,0 +1,40 @@
+{
+    "images": [
+        {
+            "id_image": 1,
+            "url": "/portafolio/p-1.webp"
+        },
+        {
+            "id_image": 2,
+            "url": "/portafolio/p-2.webp"
+        },
+        {
+            "id_image": 3,
+            "url": "/portafolio/p-3.webp"
+        },
+        {
+            "id_image": 4,
+            "url": "/portafolio/p-4.webp"
+        },
+        {
+            "id_image": 5,
+            "url": "/portafolio/p-5.webp"
+        },
+        {
+            "id_image": 6,
+            "url": "/portafolio/p-6.webp"
+        },
+        {
+            "id_image": 7,
+            "url": "/portafolio/p-7.webp"
+        },
+        {
+            "id_image": 8,
+            "url": "/portafolio/p-8.webp"
+        },
+        {
+            "id_image": 9,
+            "url": "/portafolio/p-9.webp"
+        }
+    ]
+}

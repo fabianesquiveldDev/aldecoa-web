@@ -1,10 +1,12 @@
+import siteData from "../data/site.json";
 export default function WhatsAppButton() {
-
+  const  contact = siteData.contact;
   return (
 
     <a
-      href="https://wa.link/46cexs"
+      href={`https://api.whatsapp.com/send?phone=${contact.phone_main}&text=Hola%20me%20interesa%20información%20sobre%20sus%20servicios.%20¿Podrían%20apoyarme%20con%20una%20cotización?`}
       target="_blank"
+      rel="noopener noreferrer"
       className="fixed bottom-8 right-8 z-[100] w-16 h-16 bg-red-600 text-white flex flex-col items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:-translate-y-1 transition-transform active:scale-90"
     >
 

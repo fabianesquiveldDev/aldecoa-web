@@ -1,11 +1,21 @@
+"use client";
+
+import coverturaData from '../data/coverage.json';
+import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+import mexicoMap from "../data/mexico.json";
+
 export default function Cobertura() {
+
+  const { title, description, states } = coverturaData;
+
+  // convertir nombres a array simple
+  const estadosActivos = states.map(s => s.name);
 
   return (
 
     <section className="py-24 bg-surface">
 
       <div className="container mx-auto px-8 grid lg:grid-cols-2 gap-20 items-center">
-
 
         {/* texto */}
         <div>
@@ -22,9 +32,8 @@ export default function Cobertura() {
               mb-8
             "
           >
-            ESTAMOS DONDE TU MARCA NECESITA ESTAR
+            {title}
           </h2>
-
 
           <p
             className="
@@ -33,73 +42,44 @@ export default function Cobertura() {
               mb-12
             "
           >
-            Nuestra infraestructura operativa está diseñada para cubrir
-            los estados estratégicos del sur de México. Centralizados en
-            Tabasco, llegamos con rapidez y eficiencia a cada rincón
-            de la región.
+            {description}
           </p>
 
 
-
-          {/* estados */}
+          {/* estados dinámicos */}
           <div className="grid grid-cols-2 gap-y-4 gap-x-8">
 
+            {states.map((state) => (
 
-            <div className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-red-600"></span>
-              <span className="font-bold text-white tracking-widest uppercase text-sm">
-                Tabasco
-              </span>
-            </div>
+              <div
+                key={state.id_state}
+                className="flex items-center gap-3"
+              >
 
+                <span className="w-2 h-2 bg-red-600"></span>
 
-            <div className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-red-600"></span>
-              <span className="font-bold text-white tracking-widest uppercase text-sm">
-                Chiapas
-              </span>
-            </div>
+                <span
+                  className="
+                    font-bold
+                    text-white
+                    tracking-widest
+                    uppercase
+                    text-sm
+                  "
+                >
+                  {state.name}
+                </span>
 
+              </div>
 
-            <div className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-red-600"></span>
-              <span className="font-bold text-white tracking-widest uppercase text-sm">
-                Veracruz
-              </span>
-            </div>
-
-
-            <div className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-red-600"></span>
-              <span className="font-bold text-white tracking-widest uppercase text-sm">
-                Campeche
-              </span>
-            </div>
-
-
-            <div className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-red-600"></span>
-              <span className="font-bold text-white tracking-widest uppercase text-sm">
-                Yucatán
-              </span>
-            </div>
-
-
-            <div className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-red-600"></span>
-              <span className="font-bold text-white tracking-widest uppercase text-sm">
-                Quintana Roo
-              </span>
-            </div>
-
+            ))}
 
           </div>
 
         </div>
 
 
-
-        {/* mapa decorativo */}
+        {/* MAPA REAL */}
         <div
           className="
             relative
@@ -113,72 +93,65 @@ export default function Cobertura() {
           "
         >
 
+         
 
-          {/* fondo */}
-          <div className="absolute inset-0 opacity-10">
+          {/* mapa */}
+          <div className="relative z-10 w-full h-full">
 
-            <img
-              src="/images/mapa-textura.jpg"
-              alt="Mapa"
-              className="w-full h-full object-cover"
-            />
-
-          </div>
-
-
-
-          {/* mapa svg */}
-          <div className="relative z-10 w-full h-full flex items-center justify-center">
-
-            <svg
-              className="w-full h-full fill-white/20 stroke-white/40 stroke-2"
-              viewBox="0 0 400 300"
+            <ComposableMap
+              projection="geoMercator"
+              projectionConfig={{
+                scale: 1400,
+                center: [-102, 23]
+              }}
+              className="w-full h-full"
             >
 
-              <path d="M50,150 L100,140 L150,160 L200,155 L250,140 L300,120 L350,130 L380,180 L320,250 L250,260 L180,240 L100,260 Z"></path>
+              <Geographies geography={mexicoMap}>
 
+                {({ geographies }) =>
+                  geographies.map((geo) => {
 
-              {/* punto villahermosa */}
-              <circle
-                cx="210"
-                cy="180"
-                r="8"
-                fill="#E30613"
-                className="animate-pulse"
-              />
+                    const nombreEstado =
+                      geo.properties.name;
 
+                    const activo =
+                      estadosActivos.includes(nombreEstado);
 
-              <text
-                x="225"
-                y="185"
-                fill="#E30613"
-                className="text-xs font-black font-headline"
-              >
-                VILLAHERMOSA
-              </text>
+                    return (
 
+                      <Geography
+                        key={geo.rsmKey}
+                        geography={geo}
 
-              <circle cx="280" cy="140" r="4" fill="#E30613"></circle>
+                        className={`
+                          transition-all duration-300
+                          stroke-white/40
+                          hover:opacity-80
+                          ${activo
+                            ? "fill-red-600"
+                            : "fill-white/10"
+                          }
+                        `}
+                      />
 
-              <circle cx="340" cy="160" r="4" fill="#E30613"></circle>
+                    );
 
-              <circle cx="120" cy="200" r="4" fill="#E30613"></circle>
+                  })
+                }
 
-            </svg>
+              </Geographies>
 
+            </ComposableMap>
 
-            {/* borde */}
+            {/* borde decorativo */}
             <div className="absolute inset-0 border-[2px] border-red-600/30"></div>
 
-
           </div>
-
 
         </div>
 
-
       </div>
-
 
     </section>
 

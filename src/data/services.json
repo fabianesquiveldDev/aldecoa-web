@@ -4,6 +4,7 @@
       "id_seccion": 1,
       "nombreSeccion": "Marketing & Publicidad",
       "icon": "directions_car",
+      "slug": "marketing-publicidad",
       "servicios": [
         { "id_servicio": 1, "nombre": "Estrategias 360°" },
         { "id_servicio": 2, "nombre": "Branding" },
@@ -20,6 +21,7 @@
       "id_seccion": 2,
       "nombreSeccion": "Promoción & Activaciones",
       "icon": "directions_car",
+      "slug": "promocion-activaciones",
       "servicios": [
         { "id_servicio": 10, "nombre": "Activaciones en punto de venta" },
         { "id_servicio": 11, "nombre": "Promotoría" },
@@ -34,6 +36,7 @@
       "id_seccion": 3,
       "nombreSeccion": "Eventos & Experiencias",
       "icon": "directions_car",
+      "slug": "eventos-experiencias",
       "servicios": [
         { "id_servicio": 17, "nombre": "Eventos corporativos" },
         { "id_servicio": 18, "nombre": "Eventos gubernamentales" },
@@ -46,6 +49,7 @@
       "id_seccion": 4,
       "nombreSeccion": "Eventos Sociales",
       "icon": "directions_car",
+      "slug": "eventos-sociales",
       "servicios": [
         { "id_servicio": 22, "nombre": "Bodas" },
         { "id_servicio": 23, "nombre": "XV años" },
@@ -58,6 +62,7 @@
       "id_seccion": 5,
       "nombreSeccion": "Eventos Infantiles",
       "icon": "directions_car",
+      "slug": "eventos-infantiles",
       "servicios": [
         { "id_servicio": 27, "nombre": "Fiestas temáticas" },
         { "id_servicio": 28, "nombre": "Shows infantiles" },
@@ -70,6 +75,7 @@
       "id_seccion": 6,
       "nombreSeccion": "Entretenimiento & Shows",
       "icon": "directions_car",
+      "slug": "entretenimiento-shows",
       "servicios": [
         { "id_servicio": 32, "nombre": "Shows teatrales" },
         { "id_servicio": 33, "nombre": "Animación profesional" },
@@ -81,6 +87,7 @@
       "id_seccion": 7,
       "nombreSeccion": "Producción de Eventos",
       "icon": "directions_car",
+      "slug": "produccion-eventos",
       "servicios": [
         { "id_servicio": 36, "nombre": "Teatro" },
         { "id_servicio": 37, "nombre": "Shows musicales" },
@@ -93,6 +100,7 @@
       "id_seccion": 8,
       "nombreSeccion": "Digital & Redes Sociales",
       "icon": "directions_car",
+      "slug": "digital-redes-sociales",
       "servicios": [
         { "id_servicio": 41, "nombre": "Gestión de redes sociales" },
         { "id_servicio": 42, "nombre": "Estrategia digital" },
@@ -106,6 +114,7 @@
       "id_seccion": 9,
       "nombreSeccion": "Transportación",
       "icon": "directions_car",
+      "slug": "transportacion",
       "servicios": [
         { "id_servicio": 47, "nombre": "Vans de 14 a 20 pasajeros" },
         { "id_servicio": 48, "nombre": "Traslado para eventos y staff" },
@@ -117,6 +126,7 @@
       "id_seccion": 10,
       "nombreSeccion": "Conferencias & Team Building",
       "icon": "campaign",
+      "slug": "conferencias-team-building",
       "servicios": [
         { "id_servicio": 51, "nombre": "Conferencias motivacionales" },
         { "id_servicio": 52, "nombre": "Talleres empresariales" },
@@ -129,6 +139,7 @@
       "id_seccion": 11,
       "nombreSeccion": "Escenografía & Producción",
       "icon": "directions_car",
+      "slug": "escenografia-produccion",
       "servicios": [
         { "id_servicio": 56, "nombre": "Diseño de sets y escenografías" },
         { "id_servicio": 57, "nombre": "Construcción de stands" },
@@ -141,6 +152,7 @@
     "id_seccion": 12,
     "nombreSeccion": "Producción Creativa",
     "icon": "directions_car",
+    "slug": "produccion-creativa",
     "servicios": [
       { "id_servicio": 61, "nombre": "Spots de radio y TV" },
       { "id_servicio": 62, "nombre": "Jingles" },
@@ -153,6 +165,7 @@
     "id_seccion": 13,
     "nombreSeccion": "Renta & Servicios para Eventos",
     "icon": "directions_car",
+    "slug": "renta-servicios-eventos",
     "servicios": [
       { "id_servicio": 66, "nombre": "Audio profesional" },
       { "id_servicio": 67, "nombre": "Iluminación" },
@@ -167,6 +180,7 @@
     "id_seccion": 14,
     "nombreSeccion": "Infraestructura Propia",
     "icon": "directions_car",
+    "slug": "infraestructura-propia",
     "servicios": [
       { "id_servicio": 73, "nombre": "Renta de palapa para eventos" },
       { "id_servicio": 74, "nombre": "Área con alberca" }

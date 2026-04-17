@@ -1,9 +1,10 @@
+import site from "../data/site.json";
 export default function Testimonios() {
 
   return (
 
     <section
-      id="testimonios"
+      id={site.navigation[3].href.substring(1)}
       className="py-24 bg-surface-container-lowest"
     >
 

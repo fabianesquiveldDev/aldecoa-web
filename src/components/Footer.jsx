@@ -1,5 +1,6 @@
+import siteData from '../data/site.json';
 export default function Footer() {
-
+  const navItems = siteData.navigation;
   return (
 
     <footer className="bg-[#0E0E0E] grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 w-full border-t border-white/5">
@@ -35,26 +36,41 @@ export default function Footer() {
         <ul className="space-y-4">
 
           <li>
-            <a href="#inicio" className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
+            <a 
+            
+            href={`/${navItems[0].href}`} className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
               Inicio
             </a>
           </li>
 
           <li>
-            <a href="#nosotros" className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
+            <a href={`/${navItems[1].href}`} className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
               Nosotros
             </a>
           </li>
 
           <li>
-            <a href="#servicios" className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
+            <a href={`/${navItems[2].href}`} className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
               Servicios
             </a>
           </li>
 
+           <li>
+            <a href={`/${navItems[3].href}`} className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
+              Clientes
+            </a>
+          </li>
+
           <li>
-            <a href="#portfolio" className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
+            <a href={`/${navItems[4].href}`} className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
               Portfolio
+            </a>
+          </li>
+
+          
+          <li>
+            <a href={`/${navItems[5].href}`} className="text-zinc-500 hover:text-red-600 transition-colors text-sm">
+              Contacto
             </a>
           </li>
 

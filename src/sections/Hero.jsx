@@ -4,6 +4,7 @@ import site from "../data/site.json";
 
 export default function Hero() {
   const { badge, description, title } = heroData;
+  const contact = site.contact;
 
 
 
@@ -57,8 +58,10 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
 
             <a
-              href="https://wa.link/46cexs"
+              href={`https://api.whatsapp.com/send?phone=${contact.phone_main}&text=Hola%20me%20interesa%20información%20sobre%20sus%20servicios.%20¿Podrían%20apoyarme%20con%20una%20cotización?`}
               className="bg-primary-container text-white px-10 py-5 font-black uppercase tracking-widest text-sm flex items-center justify-center gap-3 hover:translate-x-1 hover:-translate-y-1 transition-all"
+              target="_blank"
+              rel="noopener noreferrer"
             >
 
               Contáctanos por WhatsApp
@@ -78,17 +81,35 @@ export default function Hero() {
         </div>
 
 
-        {/* imagen */}
+        {/* video */}
         <div className="relative hidden lg:block">
 
           <div className="aspect-square bg-surface-container-highest relative overflow-hidden">
 
-            <img
-              src="/images/hero/hero.jpg"
-              alt="marketing"
-              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-            />
+           <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="/images/hero.jpg"
+              className="
+                w-full
+                h-full
+                object-cover
+                grayscale
+                hover:grayscale-0
+                transition-all
+                duration-700
+              "
+            >
 
+              <source
+                src={heroData.video}
+                type="video/mp4"
+              />
+
+            </video>
             <div className="absolute inset-0 border-[20px] border-red-600/20 pointer-events-none" />
 
           </div>

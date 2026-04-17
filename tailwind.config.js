@@ -8,6 +8,7 @@ export default {
     "./src/app/**/*.{js,jsx}",
     "./src/components/**/*.{js,jsx}",
     "./src/sections/**/*.{js,jsx}",
+    
   ],
 
   theme: {
