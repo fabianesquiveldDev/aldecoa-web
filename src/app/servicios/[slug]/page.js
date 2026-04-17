@@ -91,7 +91,7 @@ export default async function Page({ params }) {
 
   const { nombreSeccion, descripcion, servicios, id_seccion } = servicio;
   const serviceCount = servicios?.length ?? 0;
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${site.contact.phone}&text=Hola%20me%20interesa%20el%20servicio%20de%20${encodeURIComponent(nombreSeccion)}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${site.contact.phone_main}&text=Hola%20me%20interesa%20el%20servicio%20de%20${encodeURIComponent(nombreSeccion)}`;
 
   return (
     <main style={{ background: "#111111", color: "#fff", minHeight: "100vh" }}>

@@ -12,7 +12,7 @@ export default function Clientes() {
   return (
 
     <section
-      id={site.navigation[3].href.substring(1)}
+      id={site.navigation[4].href.substring(1)}
       className="bg-white py-20 overflow-hidden"
     >
 

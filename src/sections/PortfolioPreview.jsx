@@ -48,7 +48,7 @@ export default function PortfolioPreview() {
 
   return (
 
-    <section id={site.navigation[4].href.substring(1)} className="py-24 bg-surface">
+    <section id={site.navigation[3].href.substring(1)} className="py-24 bg-surface">
 
       <div className="container mx-auto px-8">
 
