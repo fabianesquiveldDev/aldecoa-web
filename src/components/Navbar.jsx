@@ -104,7 +104,26 @@ export default function Navbar() {
   useEffect(() => {
     setMounted(true);
   }, []);
+useEffect(() => {
 
+  const updateFromHash = () => {
+
+    const hash = window.location.hash.replace("#", "");
+
+    if (hash) {
+      setActive(hash);
+    }
+
+  };
+
+  updateFromHash();
+
+  window.addEventListener("hashchange", updateFromHash);
+
+  return () =>
+    window.removeEventListener("hashchange", updateFromHash);
+
+}, []);
   useEffect(() => {
 
     const handleKey = (e) => {
@@ -315,7 +334,7 @@ export default function Navbar() {
                     : "rgba(255,255,255,0.3)"
                 }}>
 
-                  {ICONS[item.label.toLowerCase().trim()] || ICONS.portafolio}
+                  {ICONS[item.label.toLowerCase()]}
 
                 </span>
 
