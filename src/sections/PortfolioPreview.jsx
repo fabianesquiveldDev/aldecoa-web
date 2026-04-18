@@ -1,54 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import site from "../data/site.json";
+import portafolioPrwData from "../data/PortfolioPreview.json";
 
 export default function PortfolioPreview() {
 
-  const proyectos = [
-
-    {
-      image: "/images/portfolio/evento1.jpg",
-      category: "Evento Corporativo",
-      title: "Convención Anual 2024",
-      span: "md:col-span-2",
-      ratio: "aspect-video",
-    },
-
-    {
-      image: "/images/portfolio/evento2.jpg",
-      category: "Activación BTL",
-      title: "",
-      ratio: "aspect-square",
-    },
-
-    {
-      image: "/images/portfolio/evento3.jpg",
-      category: "Producción",
-      title: "",
-      ratio: "aspect-square",
-    },
-
-    {
-      image: "/images/portfolio/evento4.jpg",
-      category: "Trade Marketing",
-      title: "",
-      ratio: "aspect-square",
-    },
-
-    {
-      image: "/images/portfolio/evento5.jpg",
-      category: "Tecnología",
-      title: "Foro Digital Innovación",
-      span: "md:col-span-3",
-      ratio: "aspect-[21/9]",
-    },
-
-  ];
-
+  const proyectos = portafolioPrwData.PortfolioPreview;
 
   return (
 
-    <section id={site.navigation[3].href.substring(1)} className="py-24 bg-surface">
+    <section
+      id={site.navigation[3].href.substring(1)}
+      className="py-24 bg-surface"
+    >
 
       <div className="container mx-auto px-8">
 
@@ -66,6 +30,7 @@ export default function PortfolioPreview() {
         </div>
 
 
+
         {/* grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
 
@@ -74,9 +39,11 @@ export default function PortfolioPreview() {
             <div
               key={index}
               className={`
-                relative overflow-hidden bg-surface-container
-                ${item.span || ""}
-                ${item.ratio}
+                relative
+                overflow-hidden
+                bg-surface-container
+                ${item.span ?? ""}
+                ${item.ratio ?? "aspect-square"}
               `}
             >
 
@@ -84,6 +51,7 @@ export default function PortfolioPreview() {
                 src={item.image}
                 alt={item.title || item.category}
                 fill
+                sizes="(max-width:768px) 100vw, 25vw"
                 className="
                   object-cover
                   grayscale
@@ -119,40 +87,38 @@ export default function PortfolioPreview() {
         </div>
 
 
-        {/* boton ver más */}
+
+        {/* boton */}
         <div className="mt-16 flex justify-center">
 
           <Link
-  href="/portfolioMas"
-  className="
-    border
-    border-primary
-    text-primary
+            href="/portfolioMas"
+            className="
+              border border-primary
+              text-primary
 
-    px-10
-    py-3
+              px-10 py-3
 
-    font-headline
-    font-black
-    tracking-widest
-    uppercase
-    text-sm
+              font-headline
+              font-black
+              tracking-widest
+              uppercase
+              text-sm
 
-    hover:bg-primary
-    hover:text-white
-    hover:-translate-y-1
+              hover:bg-primary
+              hover:text-white
+              hover:-translate-y-1
 
-    transition-all
-    duration-300
-  "
->
+              transition-all
+              duration-300
+            "
+          >
 
-  Ver más proyectos →
+            Ver más proyectos →
 
-</Link>
+          </Link>
 
         </div>
-
 
       </div>
 

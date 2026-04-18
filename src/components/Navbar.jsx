@@ -187,7 +187,7 @@ export default function Navbar() {
     <>
       {/* ── NAVBAR ───────────────────────────────────────────────────────── */}
       <nav className="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-xl border-b border-white/[0.06]">
-        <div className="px-6 py-4 grid grid-cols-3 items-center">
+        <div className="px-6 py-4 flex items-center justify-between md:grid md:grid-cols-3">
 
           {/* LOGO */}
           <button onClick={() => goToSection(site.navigation[0].href)} className="text-left">
@@ -212,7 +212,7 @@ export default function Navbar() {
           </div>
 
           {/* BOTÓN HAMBURGUESA MOBILE */}
-          <div className="flex justify-end md:hidden col-start-3">
+          <div className="flex justify-end md:hidden">
             <button
               onClick={() => setSidebarOpen(true)}
               aria-label="Abrir menú"
