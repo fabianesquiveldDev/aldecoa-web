@@ -1,0 +1,40 @@
+{
+    "PortfolioPreview":[
+        {
+            "image": "/images/portfolio/evento1.jpg",
+            "category": "Evento Corporativo",
+            "title": "Convención Anual 2024",
+            "span": "md:col-span-2",
+            "ratio": "aspect-video"
+        },
+
+        {
+            "image": "/images/portfolio/evento2.jpg",
+            "category": "Activación BTL",
+            "title": "",
+            "ratio": "aspect-square"
+        },
+
+        {
+            "image": "/images/portfolio/evento3.jpg",
+            "category": "Producción",
+            "title": "",
+            "ratio": "aspect-square"
+        },
+
+        {
+            "image": "/images/portfolio/evento4.jpg",
+            "category": "Trade Marketing",
+            "title": "",
+            "ratio": "aspect-square"
+        },
+
+        {
+            "image": "/images/portfolio/evento5.jpg",
+            "category": "Tecnología",
+            "title": "Foro Digital Innovación",
+            "span": "md:col-span-3",
+            "ratio": "aspect-[21/9]"
+        }
+    ]
+}

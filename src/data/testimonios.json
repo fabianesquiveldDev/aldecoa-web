@@ -1,0 +1,23 @@
+{
+    "testimonios": [
+        {
+        "id": 1,
+        "testimonio": "La capacidad de ALDECOA para aterrizar conceptos complejos en ejecuciones impecables es lo que los diferencia del resto de las agencias.",
+        "cargo": "Director de Marketing",
+        "empresa": "Consumo Masivo"
+        
+        },
+        {
+        "id": 2,
+        "testimonio": "Su logística en el sureste no tiene comparación. Manejaron múltiples puntos simultáneos con una coordinación impecable.",
+        "cargo": "Gerente de Operaciones",
+        "empresa": "Retail Nacional"
+        },
+        {
+        "id": 3,
+        "testimonio": "Buscábamos impacto y logramos una experiencia que conectó con nuestro público de manera memorable.",
+        "cargo": "CEO",
+        "empresa": "Startup"
+        }
+    ]
+}

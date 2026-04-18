@@ -46,6 +46,8 @@ export default {
         headline: ["Epilogue", "sans-serif"],
         body: ["Manrope", "sans-serif"],
         label: ["Manrope", "sans-serif"],
+        epilogue: ["var(--font-epilogue)"],
+        manrope:  ["var(--font-manrope)"],  
 
       },
 
