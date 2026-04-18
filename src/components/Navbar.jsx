@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import site from "../data/site.json";
 
 const ICONS = {
+
   inicio: (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
       <path d="M2 7.5L8 2l6 5.5V14a.5.5 0 01-.5.5h-3V10h-5v4.5h-3A.5.5 0 012 14V7.5z" stroke="currentColor" strokeWidth="1.3"/>
@@ -28,12 +29,36 @@ const ICONS = {
     </svg>
   ),
 
+  portafolio: (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <rect x="2" y="4" width="12" height="9" rx="1" stroke="currentColor" strokeWidth="1.3"/>
+      <path d="M6 4V3a1 1 0 011-1h2a1 1 0 011 1v1" stroke="currentColor" strokeWidth="1.3"/>
+    </svg>
+  ),
+
+  clientes: (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <circle cx="5" cy="6" r="2" stroke="currentColor" strokeWidth="1.3"/>
+      <circle cx="11" cy="6" r="2" stroke="currentColor" strokeWidth="1.3"/>
+      <path d="M2 13c0-2 2-3 3-3s3 1 3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+      <path d="M8 13c0-2 2-3 3-3s3 1 3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
+    </svg>
+  ),
+
+  cobertura: (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <circle cx="8" cy="8" r="5" stroke="currentColor" strokeWidth="1.3"/>
+      <circle cx="8" cy="8" r="2" stroke="currentColor" strokeWidth="1.3"/>
+    </svg>
+  ),
+
   contacto: (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
       <path d="M2 4h12v8a1 1 0 01-1 1H3a1 1 0 01-1-1V4z" stroke="currentColor" strokeWidth="1.3"/>
       <path d="M2 4l6 5 6-5" stroke="currentColor" strokeWidth="1.3"/>
     </svg>
   ),
+
 };
 
 const Logo = ({
@@ -290,7 +315,7 @@ export default function Navbar() {
                     : "rgba(255,255,255,0.3)"
                 }}>
 
-                  {ICONS[item.label.toLowerCase()]}
+                  {ICONS[item.label.toLowerCase().trim()] || ICONS.portafolio}
 
                 </span>
 
