@@ -24,6 +24,16 @@ const SOCIALS = [
   { svg: "M22 12a10 10 0 1 0-11.56 9.87v-6.99h-2.5V12h2.5V9.8c0-2.47 1.47-3.83 3.72-3.83 1.08 0 2.2.19 2.2.19v2.42h-1.24c-1.22 0-1.6.76-1.6 1.54V12h2.72l-.43 2.88h-2.29v6.99A10 10 0 0 0 22 12z" },
 ];
 
+function formatPhone(phone){
+
+  // quitar código de país 52
+  const local = phone.replace(/^52/, "");
+
+  // separar en bloques 3-3-4
+  return local.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $2 $3");
+
+}
+
 export default function Contacto() {
   const { contact, social } = site;
   const [mounted, setMounted] = useState(false);
@@ -65,8 +75,8 @@ export default function Contacto() {
             <div className="space-y-4 md:space-y-6">
               {[
                 { icon: "email", text: contact.email },
-                { icon: "call", text: contact.phone_main },
-                { icon: "call", text: contact.phone_secondary },
+                { icon: "call", text: formatPhone(contact.phone_main) },
+                { icon: "call", text: formatPhone(contact.phone_secondary) },
               ].map(({ icon, text }) => (
                 <ContactIcon key={text} icon={
                   <span className="material-symbols-outlined text-red-600 group-hover:text-white text-xl md:text-2xl">{icon}</span>
