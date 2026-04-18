@@ -45,8 +45,9 @@ export default function Clientes() {
                   height={85}
                   className="
                     object-contain max-h-full max-w-full
-                    grayscale opacity-50
-                    group-hover:grayscale-0 group-hover:opacity-100
+                    grayscale-0 opacity-100
+                    md:grayscale md:opacity-50
+                    md:group-hover:grayscale-0 md:group-hover:opacity-100
                     transition duration-300
                   "
                 />
