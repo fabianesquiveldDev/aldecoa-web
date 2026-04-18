@@ -89,51 +89,65 @@ export default function Navbar() {
   // Hidratación segura
   useEffect(() => { setMounted(true) }, [])
 
-  // ── LÓGICA CÓDIGO 1: scroll detectSection ──────────────────────────────────
   useEffect(() => {
+
+  // solo ejecutar en home
+  if (pathname !== "/") return
+
+  let currentSection = ""
+
   const detectSection = () => {
+
     const scrollPosition = window.scrollY + 140
+
     navItems.forEach(link => {
-      const id = link.href.replace("#", "")
+
+      if (!link.href.startsWith("#")) return
+
+      const id = link.href.replace("#","")
+
       const el = document.getElementById(id)
+
       if (!el) return
-      const top    = el.offsetTop
+
+      const top = el.offsetTop
       const height = el.offsetHeight
-      if (scrollPosition >= top && scrollPosition < top + height) {
-        setActive(id)
-        // ✅ Actualiza la URL mientras scrolleas
-        window.history.replaceState(null, "", link.href)
+
+      if (
+        scrollPosition >= top &&
+        scrollPosition < top + height
+      ) {
+
+        // solo actualizar si cambió la sección
+        if (currentSection !== id) {
+
+          currentSection = id
+
+          setActive(id)
+
+          // cambia URL sin recargar la página
+          window.history.replaceState(
+            null,
+            "",
+            `/#${id}`
+          )
+
+        }
+
       }
+
     })
+
   }
 
   detectSection()
+
   window.addEventListener("scroll", detectSection)
-  return () => window.removeEventListener("scroll", detectSection)
+
+  return () =>
+    window.removeEventListener("scroll", detectSection)
+
 }, [pathname, navItems])
-
-  // ── LÓGICA CÓDIGO 1: hashchange ────────────────────────────────────────────
-  useEffect(() => {
-    const updateFromHash = () => {
-      const hash = window.location.hash.replace("#", "")
-      if (hash) {
-        setActive(hash)
-      } else {
-        setActive(site.navigation[0].href.replace("#", ""))
-      }
-    }
-
-    updateFromHash()
-
-    window.addEventListener("hashchange", updateFromHash)
-    window.addEventListener("popstate",   updateFromHash)
-
-    return () => {
-      window.removeEventListener("hashchange", updateFromHash)
-      window.removeEventListener("popstate",   updateFromHash)
-    }
-  }, [])
-
   // ── DISEÑO CÓDIGO 2: cerrar sidebar con Escape ─────────────────────────────
   useEffect(() => {
     const handleKey = (e) => { if (e.key === "Escape") setSidebarOpen(false) }
