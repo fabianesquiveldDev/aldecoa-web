@@ -75,6 +75,11 @@
       "id_client": 13,
       "name": "Soriana",
       "logo": "/logos/soriana.webp"
+    },
+    {
+      "id_client": 14,
+      "name": "Andatti",
+      "logo": "/logos/Andatti.webp"
     }
   ]
 }

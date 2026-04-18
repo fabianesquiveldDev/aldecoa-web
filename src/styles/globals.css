@@ -84,3 +84,7 @@ body {
 .kinetic-slash {
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 }
+
+.footer-link{
+  @apply text-zinc-400 text-sm transition-colors hover:text-red-600;
+}
