@@ -3,7 +3,7 @@
     {
       "id_seccion": 1,
       "nombreSeccion": "Marketing & Publicidad",
-      "icon": "directions_car",
+      "icon": "campaign",
       "slug": "marketing-publicidad",
       "servicios": [
         { "id_servicio": 1, "nombre": "Estrategias 360°" },
@@ -20,7 +20,7 @@
     {
       "id_seccion": 2,
       "nombreSeccion": "Promoción & Activaciones",
-      "icon": "directions_car",
+      "icon": "storefront",
       "slug": "promocion-activaciones",
       "servicios": [
         { "id_servicio": 10, "nombre": "Activaciones en punto de venta" },
@@ -35,7 +35,7 @@
     {
       "id_seccion": 3,
       "nombreSeccion": "Eventos & Experiencias",
-      "icon": "directions_car",
+      "icon": "event",
       "slug": "eventos-experiencias",
       "servicios": [
         { "id_servicio": 17, "nombre": "Eventos corporativos" },
@@ -48,7 +48,7 @@
     {
       "id_seccion": 4,
       "nombreSeccion": "Eventos Sociales",
-      "icon": "directions_car",
+      "icon": "celebration",
       "slug": "eventos-sociales",
       "servicios": [
         { "id_servicio": 22, "nombre": "Bodas" },
@@ -61,7 +61,7 @@
     {
       "id_seccion": 5,
       "nombreSeccion": "Eventos Infantiles",
-      "icon": "directions_car",
+      "icon": "toys",
       "slug": "eventos-infantiles",
       "servicios": [
         { "id_servicio": 27, "nombre": "Fiestas temáticas" },
@@ -74,7 +74,7 @@
     {
       "id_seccion": 6,
       "nombreSeccion": "Entretenimiento & Shows",
-      "icon": "directions_car",
+      "icon": "theater_comedy",
       "slug": "entretenimiento-shows",
       "servicios": [
         { "id_servicio": 32, "nombre": "Shows teatrales" },
@@ -86,7 +86,7 @@
     {
       "id_seccion": 7,
       "nombreSeccion": "Producción de Eventos",
-      "icon": "directions_car",
+      "icon": "theater_comedy",
       "slug": "produccion-eventos",
       "servicios": [
         { "id_servicio": 36, "nombre": "Teatro" },
@@ -99,7 +99,7 @@
     {
       "id_seccion": 8,
       "nombreSeccion": "Digital & Redes Sociales",
-      "icon": "directions_car",
+      "icon": "public",
       "slug": "digital-redes-sociales",
       "servicios": [
         { "id_servicio": 41, "nombre": "Gestión de redes sociales" },
@@ -125,7 +125,7 @@
     {
       "id_seccion": 10,
       "nombreSeccion": "Conferencias & Team Building",
-      "icon": "campaign",
+      "icon": "groups",
       "slug": "conferencias-team-building",
       "servicios": [
         { "id_servicio": 51, "nombre": "Conferencias motivacionales" },
@@ -138,7 +138,7 @@
     {
       "id_seccion": 11,
       "nombreSeccion": "Escenografía & Producción",
-      "icon": "directions_car",
+      "icon": "architecture",
       "slug": "escenografia-produccion",
       "servicios": [
         { "id_servicio": 56, "nombre": "Diseño de sets y escenografías" },
@@ -151,7 +151,7 @@
     {
     "id_seccion": 12,
     "nombreSeccion": "Producción Creativa",
-    "icon": "directions_car",
+    "icon": "brush",
     "slug": "produccion-creativa",
     "servicios": [
       { "id_servicio": 61, "nombre": "Spots de radio y TV" },
@@ -164,7 +164,7 @@
     {
     "id_seccion": 13,
     "nombreSeccion": "Renta & Servicios para Eventos",
-    "icon": "directions_car",
+    "icon": "event_available",
     "slug": "renta-servicios-eventos",
     "servicios": [
       { "id_servicio": 66, "nombre": "Audio profesional" },
@@ -179,7 +179,7 @@
    {
     "id_seccion": 14,
     "nombreSeccion": "Infraestructura Propia",
-    "icon": "directions_car",
+    "icon": "villa",
     "slug": "infraestructura-propia",
     "servicios": [
       { "id_servicio": 73, "nombre": "Renta de palapa para eventos" },
