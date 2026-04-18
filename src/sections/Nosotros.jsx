@@ -1,3 +1,4 @@
+// nosotros.jsx
 import site from "../data/site.json";
 import nosotrosData from "../data/nosotros.json";
 import Image from "next/image";
@@ -15,20 +16,23 @@ export default function Nosotros() {
   return (
     <section
       id={site.navigation[1].href.substring(1)}
+      aria-labelledby="nosotros-titulo" // ← vincula el heading a la section
       className="py-16 md:py-24 bg-surface"
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
 
           {/* IMAGEN */}
-          <div className="relative mx-4 md:mx-0">
+          <figure className="relative mx-4 md:mx-0"> {/* ← div → figure semántico */}
             <div className="bg-surface-container-low p-3 md:p-4 relative z-10">
               <Image
                 src={image}
-                alt="Equipo Aldecoa trabajando en evento corporativo"
+                // ↓ alt más específico con keywords
+                alt="Equipo ALDECOA ejecutando evento de marketing y entretenimiento en el sur de México"
                 width={1000}
                 height={1250}
-                priority
+                // ↓ quitar priority — solo Hero lo necesita, este está debajo del fold
+                loading="lazy"
                 className="
                   w-full
                   h-[280px] sm:h-[420px] md:h-[600px]
@@ -41,26 +45,37 @@ export default function Nosotros() {
               />
             </div>
 
-            {/* cuadro rojo decorativo — más chico en móvil */}
-            <div className="absolute -bottom-5 -right-5 md:-bottom-10 md:-right-10 w-28 h-28 sm:w-44 sm:h-44 md:w-64 md:h-64 bg-primary"></div>
-          </div>
+            {/* cuadro rojo decorativo */}
+            <div
+              aria-hidden="true" // ← decorativo, ignorado por crawlers
+              className="absolute -bottom-5 -right-5 md:-bottom-10 md:-right-10 w-28 h-28 sm:w-44 sm:h-44 md:w-64 md:h-64 bg-primary"
+            />
+
+            {/* ↓ descripción legible para Google */}
+            <figcaption className="sr-only">
+              El equipo de ALDECOA en acción — agencia de marketing, publicidad y entretenimiento en el sur de México
+            </figcaption>
+          </figure>
 
           {/* TEXTO */}
           <div className="space-y-6 md:space-y-8 mt-8 md:mt-0">
 
             <div className="space-y-3 md:space-y-4">
-              <h2 className="
-                text-primary font-black tracking-widest text-sm uppercase
-              ">
+              {/* ↓ section_tag es decorativo, no debe ser h2 */}
+              <p className="text-primary font-black tracking-widest text-sm uppercase">
                 {section_tag}
-              </h2>
+              </p>
 
-              <h3 className="
-                text-3xl sm:text-4xl md:text-5xl
-                font-black font-headline text-white leading-tight uppercase
-              ">
+              {/* ↓ h2 correcto para sección — agregado id para aria-labelledby */}
+              <h2
+                id="nosotros-titulo"
+                className="
+                  text-3xl sm:text-4xl md:text-5xl
+                  font-black font-headline text-white leading-tight uppercase
+                "
+              >
                 {title}
-              </h3>
+              </h2>
             </div>
 
             <p className="text-on-background/70 text-base md:text-lg leading-relaxed">
@@ -68,7 +83,8 @@ export default function Nosotros() {
             </p>
 
             {/* frase destacada */}
-            <div className="
+            {/* ↓ blockquote es el elemento semántico correcto para citas */}
+            <blockquote className="
               border-l-4 border-primary
               pl-5 md:pl-8 py-3 md:py-4
               bg-surface-container-low
@@ -77,27 +93,28 @@ export default function Nosotros() {
               <p className="text-base md:text-xl text-white font-medium">
                 "{quote}"
               </p>
-            </div>
+            </blockquote>
 
             {/* métricas */}
-            <div className="grid grid-cols-3 gap-4 md:gap-8 pt-4 md:pt-8">
+            {/* ↓ dl/dt/dd es la estructura semántica correcta para pares label-valor */}
+            <dl className="grid grid-cols-3 gap-4 md:gap-8 pt-4 md:pt-8">
               {stats.map((stat) => (
                 <div key={stat.id}>
-                  <p className="
+                  <dd className="
                     text-2xl sm:text-3xl md:text-4xl
                     font-black text-white font-headline
                   ">
                     {stat.value}
-                  </p>
-                  <p className="
+                  </dd>
+                  <dt className="
                     text-[9px] sm:text-[10px]
                     font-bold text-primary uppercase tracking-widest mt-1 md:mt-2
                   ">
                     {stat.label}
-                  </p>
+                  </dt>
                 </div>
               ))}
-            </div>
+            </dl>
 
           </div>
         </div>

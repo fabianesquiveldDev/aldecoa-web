@@ -1,214 +1,168 @@
-import siteData from '../data/site.json';
+import Link from 'next/link';
+import Script from 'next/script';
+
+// JSON-LD: datos estructurados de la empresa (SEO local)
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MarketingAgency',
+  name: 'Aldecoa 360',
+  url: 'https://www.aldecoa360.com',
+  logo: 'https://www.aldecoa360.com/logo.png', // cambia por la ruta real
+  description:
+    'Agencia de marketing y estrategia de marca en el sureste mexicano. Especialistas en Tabasco y la región.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Villahermosa',
+    addressRegion: 'Tabasco',
+    addressCountry: 'MX',
+  },
+  areaServed: {
+    '@type': 'GeoCircle',
+    geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: 17.9869,
+      longitude: -92.9303,
+    },
+    geoRadius: '500000', // cubre sureste mexicano
+  },
+  sameAs: [
+    // agrega tus redes sociales reales
+    'https://www.instagram.com/aldecoa360',
+    'https://www.facebook.com/aldecoa360',
+  ],
+};
+
+const navLinks = [
+  { href: '/',           label: 'Inicio' },
+  { href: '/nosotros',   label: 'Nosotros' },
+  { href: '/servicios',  label: 'Servicios' },
+  { href: '/portafolio', label: 'Portafolio' },
+  { href: '/clientes',   label: 'Clientes' },
+  { href: '/cobertura',  label: 'Cobertura' },
+  { href: '/contacto',   label: 'Contacto' },
+];
+
+const legalLinks = [
+  { href: '/aviso-de-privacidad',     label: 'Aviso de privacidad' },
+  { href: '/terminos-y-condiciones',  label: 'Términos y condiciones' },
+];
 
 export default function Footer() {
-
-  const navItems = siteData.navigation;
-
   return (
+    <>
+      {/* JSON-LD inyectado en el <head> via next/script */}
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        strategy="afterInteractive"
+      />
 
-    <footer className="
-      bg-[#0E0E0E]
-      border-t border-white/5
-      w-full
-    ">
-
-      <div className="
-        max-w-7xl
-        mx-auto
-        px-6 sm:px-8
-        py-14 sm:py-16
-        grid
-        gap-12
-        grid-cols-1
-        sm:grid-cols-2
-        lg:grid-cols-4
-      ">
-
-        {/* marca */}
+      <footer
+        aria-label="Pie de página de Aldecoa 360"
+        className="bg-[#0E0E0E] border-t border-white/5 w-full"
+      >
         <div className="
-          space-y-5
-          text-center
-          sm:text-left
+          max-w-7xl mx-auto
+          px-6 sm:px-8
+          py-14 sm:py-16
+          grid gap-12
+          grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
         ">
 
-          <span className="
-            block
-            text-2xl
-            font-black
-            text-white
-            uppercase
-            tracking-tight
-          ">
+          {/* Marca — semántica con <address> para SEO local */}
+          <div className="space-y-5 text-center sm:text-left">
+            {/*
+              Usa <p> con aria-label en lugar de <span> mudo.
+              Si el logo ya aparece en el <header> como <h1>, no lo repitas como heading.
+            */}
+            <p
+              aria-label="Aldecoa 360 - Agencia de marketing en el sureste mexicano"
+              className="text-2xl font-black text-white uppercase tracking-tight"
+            >
+              ALDECOA
+            </p>
 
-            ALDECOA
+            {/*
+              <address> le indica a Google que este bloque
+              contiene información de contacto/localización real.
+            */}
+            <address className="not-italic">
+              <p className="text-zinc-400 text-sm leading-relaxed max-w-xs mx-auto sm:mx-0">
+                Expertos en detonar marcas en el sureste mexicano.
+                Estrategia y ejecución bajo una misma visión.
+              </p>
+              {/* Agrega teléfono y ciudad real — ayuda al SEO local */}
+              <p className="text-zinc-500 text-xs mt-3">
+                Villahermosa, Tabasco · México
+              </p>
+            </address>
+          </div>
 
-          </span>
+          {/* Navegación */}
+          <nav aria-label="Enlaces de navegación en el pie de página">
+            <div className="space-y-5 text-center sm:text-left">
+              <h2 className="text-white font-semibold uppercase text-xs tracking-[0.25em]">
+                Navegación
+              </h2>
+              <ul className="space-y-3" role="list">
+                {navLinks.map(({ href, label }) => (
+                  <li key={href}>
+                    {/*
+                      Link de Next.js en lugar de <a>:
+                      - prefetch automático
+                      - navegación sin recarga completa
+                      - mejor puntaje en Core Web Vitals
+                    */}
+                    <Link
+                      href={href}
+                      className="footer-link"
+                      aria-label={`Ir a ${label}`}
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </nav>
 
-          <p className="
-            text-zinc-400
-            text-sm
-            leading-relaxed
-            max-w-xs
-            mx-auto
-            sm:mx-0
-          ">
+          {/* Legal */}
+          <nav aria-label="Enlaces legales en el pie de página">
+            <div className="space-y-5 text-center sm:text-left">
+              <h2 className="text-white font-semibold uppercase text-xs tracking-[0.25em]">
+                Legal
+              </h2>
+              <ul className="space-y-3" role="list">
+                {legalLinks.map(({ href, label }) => (
+                  <li key={href}>
+                    <Link href={href} className="footer-link">
+                      {label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </nav>
 
-            Expertos en detonar marcas en el sureste mexicano.
-            Estrategia y ejecución bajo una misma visión.
-
-          </p>
-
-        </div>
-
-
-
-        {/* navegación */}
-        <div className="
-          space-y-5
-          text-center
-          sm:text-left
-        ">
-
-          <h5 className="
-            text-white
-            font-semibold
-            uppercase
-            text-xs
-            tracking-[0.25em]
-          ">
-
-            Navegación
-
-          </h5>
-
-          <ul className="space-y-3">
-
-            <li>
-              <a href={`/${navItems[0].href}`} className="footer-link">
-                Inicio
-              </a>
-            </li>
-
-            <li>
-              <a href={`/${navItems[1].href}`} className="footer-link">
-                Nosotros
-              </a>
-            </li>
-
-            <li>
-              <a href={`/${navItems[2].href}`} className="footer-link">
-                Servicios
-              </a>
-            </li>
-
-            <li>
-              <a href={`/${navItems[3].href}`} className="footer-link">
-                Portafolio
-              </a>
-            </li>
-
-            <li>
-              <a href={`/${navItems[4].href}`} className="footer-link">
-                Clientes
-              </a>
-            </li>
-
-            <li>
-              <a href={`/${navItems[5].href}`} className="footer-link">
-                Cobertura
-              </a>
-            </li>
-
-            <li>
-              <a href={`/${navItems[6].href}`} className="footer-link">
-                Contacto
-              </a>
-            </li>
-
-          </ul>
+          {/* Copyright */}
+          <div className="space-y-5 text-center sm:text-left">
+            <h2 className="text-white font-semibold uppercase text-xs tracking-[0.25em]">
+              Copyright
+            </h2>
+            {/*
+              <small> es el elemento semántico correcto para
+              avisos legales y copyright según HTML5.
+            */}
+            <small className="block text-zinc-400 text-xs leading-relaxed not-italic">
+              © {new Date().getFullYear()} ALDECOA 360.
+              <br />
+              Todos los derechos reservados.
+            </small>
+          </div>
 
         </div>
-
-
-
-        {/* legal */}
-        <div className="
-          space-y-5
-          text-center
-          sm:text-left
-        ">
-
-          <h5 className="
-            text-white
-            font-semibold
-            uppercase
-            text-xs
-            tracking-[0.25em]
-          ">
-
-            Legal
-
-          </h5>
-
-          <ul className="space-y-3">
-
-            <li>
-              <a href="/aviso-de-privacidad" className="footer-link">
-                Aviso de privacidad
-              </a>
-            </li>
-
-            <li>
-              <a href="/terminos-y-condiciones" className="footer-link">
-                Términos y condiciones
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-
-        {/* copyright */}
-        <div className="
-          space-y-5
-          text-center
-          sm:text-left
-        ">
-
-          <h5 className="
-            text-white
-            font-semibold
-            uppercase
-            text-xs
-            tracking-[0.25em]
-          ">
-
-            Copyright
-
-          </h5>
-
-          <p className="
-            text-zinc-400
-            text-xs
-            leading-relaxed
-          ">
-
-            © {new Date().getFullYear()} ALDECOA.
-            <br />
-            Todos los derechos reservados.
-
-          </p>
-
-        </div>
-
-      </div>
-
-
-
-    </footer>
-
+      </footer>
+    </>
   );
-
 }

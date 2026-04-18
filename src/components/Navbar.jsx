@@ -5,15 +5,15 @@ import { useEffect, useState } from "react"
 import { usePathname, useRouter } from "next/navigation"
 import site from "../data/site.json"
 
-// ─── Íconos SVG (igual que Código 2) ────────────────────────────────────────
+// ─── Íconos SVG ────────────────────────────────────────────────────────────
 const ICONS = {
   inicio: (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <path d="M2 7.5L8 2l6 5.5V14a.5.5 0 01-.5.5h-3V10h-5v4.5h-3A.5.5 0 012 14V7.5z" stroke="currentColor" strokeWidth="1.3"/>
     </svg>
   ),
   servicios: (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <rect x="2" y="2" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.3"/>
       <rect x="9" y="2" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.3"/>
       <rect x="2" y="9" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.3"/>
@@ -21,19 +21,19 @@ const ICONS = {
     </svg>
   ),
   nosotros: (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <circle cx="8" cy="6" r="3" stroke="currentColor" strokeWidth="1.3"/>
       <path d="M2 14c0-2.761 2.686-5 6-5s6 2.239 6 5" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
     </svg>
   ),
   portafolio: (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <rect x="2" y="4" width="12" height="9" rx="1" stroke="currentColor" strokeWidth="1.3"/>
       <path d="M6 4V3a1 1 0 011-1h2a1 1 0 011 1v1" stroke="currentColor" strokeWidth="1.3"/>
     </svg>
   ),
   clientes: (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <circle cx="5" cy="6" r="2" stroke="currentColor" strokeWidth="1.3"/>
       <circle cx="11" cy="6" r="2" stroke="currentColor" strokeWidth="1.3"/>
       <path d="M2 13c0-2 2-3 3-3s3 1 3 3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/>
@@ -41,28 +41,29 @@ const ICONS = {
     </svg>
   ),
   cobertura: (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <circle cx="8" cy="8" r="5" stroke="currentColor" strokeWidth="1.3"/>
       <circle cx="8" cy="8" r="2" stroke="currentColor" strokeWidth="1.3"/>
     </svg>
   ),
   contacto: (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <path d="M2 4h12v8a1 1 0 01-1 1H3a1 1 0 01-1-1V4z" stroke="currentColor" strokeWidth="1.3"/>
       <path d="M2 4l6 5 6-5" stroke="currentColor" strokeWidth="1.3"/>
     </svg>
   ),
 }
 
-// ─── Logo (igual que Código 2) ──────────────────────────────────────────────
+// ─── Logo ──────────────────────────────────────────────────────────────────
 const Logo = ({ size = 40, textSize = "text-xl", tagSize = "text-[8px]", company, logo }) => (
   <div className="flex items-center gap-3">
     <Image
       src={logo.src}
-      alt={`${company.name} logo`}
+      alt={`Logo de ${company.name}`}
       width={size}
       height={size}
       className="object-contain"
+      priority
     />
     <div className="flex flex-col">
       <span className={`${textSize} font-black text-white tracking-tighter font-headline uppercase`}>
@@ -75,7 +76,7 @@ const Logo = ({ size = 40, textSize = "text-xl", tagSize = "text-[8px]", company
   </div>
 )
 
-// ─── Navbar principal ────────────────────────────────────────────────────────
+// ─── Navbar principal ──────────────────────────────────────────────────────
 export default function Navbar() {
   const { navigation: navItems, company, logo } = site
 
@@ -83,123 +84,97 @@ export default function Navbar() {
   const router   = useRouter()
 
   const [mounted,     setMounted]     = useState(false)
-  const [active, setActive] = useState("")
+  const [active,      setActive]      = useState("")
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
-  // Hidratación segura
   useEffect(() => { setMounted(true) }, [])
 
   useEffect(() => {
-
-  // solo ejecutar en home
-  if (pathname !== "/") return
-
-  let currentSection = ""
-
-  const detectSection = () => {
-
-    const scrollPosition = window.scrollY + 140
-
-    navItems.forEach(link => {
-
-      if (!link.href.startsWith("#")) return
-
-      const id = link.href.replace("#","")
-
-      const el = document.getElementById(id)
-
-      if (!el) return
-
-      const top = el.offsetTop
-      const height = el.offsetHeight
-
-      if (
-        scrollPosition >= top &&
-        scrollPosition < top + height
-      ) {
-
-        // solo actualizar si cambió la sección
-        if (currentSection !== id) {
-
-          currentSection = id
-
-          setActive(id)
-
-          // cambia URL sin recargar la página
-          window.history.replaceState(
-            null,
-            "",
-            `/#${id}`
-          )
-
+    if (pathname !== "/") return
+    let currentSection = ""
+    const detectSection = () => {
+      const scrollPosition = window.scrollY + 140
+      navItems.forEach(link => {
+        if (!link.href.startsWith("#")) return
+        const id = link.href.replace("#","")
+        const el = document.getElementById(id)
+        if (!el) return
+        const top = el.offsetTop
+        const height = el.offsetHeight
+        if (scrollPosition >= top && scrollPosition < top + height) {
+          if (currentSection !== id) {
+            currentSection = id
+            setActive(id)
+            window.history.replaceState(null, "", `/#${id}`)
+          }
         }
+      })
+    }
+    detectSection()
+    window.addEventListener("scroll", detectSection)
+    return () => window.removeEventListener("scroll", detectSection)
+  }, [pathname, navItems])
 
-      }
-
-    })
-
-  }
-
-  detectSection()
-
-  window.addEventListener("scroll", detectSection)
-
-  return () =>
-    window.removeEventListener("scroll", detectSection)
-
-}, [pathname, navItems])
-  // ── DISEÑO CÓDIGO 2: cerrar sidebar con Escape ─────────────────────────────
   useEffect(() => {
     const handleKey = (e) => { if (e.key === "Escape") setSidebarOpen(false) }
     window.addEventListener("keydown", handleKey)
     return () => window.removeEventListener("keydown", handleKey)
   }, [])
 
-  // ── DISEÑO CÓDIGO 2: bloquear scroll del body con sidebar abierto ──────────
   useEffect(() => {
     document.body.style.overflow = sidebarOpen ? "hidden" : ""
     return () => { document.body.style.overflow = "" }
   }, [sidebarOpen])
 
-  // ── LÓGICA CÓDIGO 1: goToSection — navega desde cualquier página ───────────
-    const goToSection = (href) => {
-  const id = href.replace("#", "")
-  setActive(id)
-  setSidebarOpen(false)
-
-  if (pathname !== "/") {
-    router.push("/" + href)
-    return
+  const goToSection = (href) => {
+    const id = href.replace("#", "")
+    setActive(id)
+    setSidebarOpen(false)
+    if (pathname !== "/") {
+      router.push("/" + href)
+      return
+    }
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" })
+      window.history.pushState(null, "", href)
+    }
   }
 
-  const el = document.getElementById(id)
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth" })
-    // ✅ Esto actualiza el hash en la URL sin recargar la página
-    window.history.pushState(null, "", href)
-  }
-}
-  const isActive       = (href) => mounted && active === href.replace(/^[/#]+/, "")
-  const isSidebarOpen  = mounted && sidebarOpen
-  const closeSidebar   = () => setSidebarOpen(false)
+  const isActive      = (href) => mounted && active === href.replace(/^[/#]+/, "")
+  const isSidebarOpen = mounted && sidebarOpen
+  const closeSidebar  = () => setSidebarOpen(false)
 
   return (
     <>
-      {/* ── NAVBAR ───────────────────────────────────────────────────────── */}
-      <nav className="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-xl border-b border-white/[0.06]">
+      {/* ── NAVBAR ─────────────────────────────────────────────────────── */}
+      <nav
+        aria-label="Navegación principal de Aldecoa 360"
+        className="fixed top-0 w-full z-50 bg-zinc-950/80 backdrop-blur-xl border-b border-white/[0.06]"
+      >
         <div className="px-6 py-4 flex items-center justify-between md:grid md:grid-cols-3">
 
           {/* LOGO */}
-          <button onClick={() => goToSection(site.navigation[0].href)} className="text-left">
+          <button
+            onClick={() => goToSection(site.navigation[0].href)}
+            aria-label="Ir al inicio de Aldecoa 360"
+            className="text-left"
+          >
             <Logo size={40} company={company} logo={logo} />
           </button>
 
           {/* MENU DESKTOP */}
-          <div className="hidden md:flex justify-center gap-8">
+          <div
+            className="hidden md:flex justify-center gap-8"
+            role="list"
+          >
             {navItems.map((item, i) => (
               <button
                 key={i}
+                role="listitem"
                 onClick={() => goToSection(item.href)}
+                aria-label={`Ir a ${item.label}`}
+                aria-current={isActive(item.href) ? "page" : undefined}
                 className={`font-headline font-black tracking-tight uppercase text-sm transition-colors pb-1 ${
                   isActive(item.href)
                     ? "text-primary border-b-2 border-primary"
@@ -215,7 +190,9 @@ export default function Navbar() {
           <div className="flex justify-end md:hidden">
             <button
               onClick={() => setSidebarOpen(true)}
-              aria-label="Abrir menú"
+              aria-label="Abrir menú de navegación"
+              aria-expanded={isSidebarOpen}
+              aria-controls="sidebar-mobile"
               className="flex flex-col gap-[5px] p-2 -mr-2 group"
             >
               <span className="block w-5 h-[1.5px] bg-white rounded-full" />
@@ -228,7 +205,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* ── OVERLAY ──────────────────────────────────────────────────────── */}
+      {/* ── OVERLAY ────────────────────────────────────────────────────── */}
       <div
         onClick={closeSidebar}
         aria-hidden="true"
@@ -239,8 +216,11 @@ export default function Navbar() {
         }}
       />
 
-      {/* ── SIDEBAR MOBILE ───────────────────────────────────────────────── */}
+      {/* ── SIDEBAR MOBILE ─────────────────────────────────────────────── */}
       <aside
+        id="sidebar-mobile"
+        aria-label="Menú de navegación móvil"
+        aria-hidden={!isSidebarOpen}
         className="fixed top-0 left-0 h-full w-[260px] z-[70] bg-zinc-950 border-r border-white/[0.07] flex flex-col transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] md:hidden"
         style={{ transform: isSidebarOpen ? "translateX(0)" : "translateX(-100%)" }}
       >
@@ -249,7 +229,7 @@ export default function Navbar() {
           <Logo size={32} textSize="text-sm" tagSize="text-[7px]" company={company} logo={logo} />
           <button
             onClick={closeSidebar}
-            aria-label="Cerrar menú"
+            aria-label="Cerrar menú de navegación"
             className="p-1.5 text-white/40 hover:text-white"
           >
             ✕
@@ -257,17 +237,19 @@ export default function Navbar() {
         </div>
 
         {/* Links del sidebar */}
-        <nav className="flex flex-col py-3 flex-1">
+        <nav aria-label="Navegación móvil" className="flex flex-col py-3 flex-1">
           {navItems.map((item, i) => {
             const active_ = isActive(item.href)
             return (
               <button
                 key={i}
                 onClick={() => goToSection(item.href)}
+                aria-label={`Ir a ${item.label}`}
+                aria-current={active_ ? "page" : undefined}
                 className="flex items-center gap-3.5 px-5 py-3.5 text-xs font-black uppercase tracking-[0.06em] border-l-2 transition-colors text-left"
                 style={{
-                  borderLeftColor:   active_ ? "#e63946" : "transparent",
-                  backgroundColor:   active_ ? "rgba(230,57,70,0.08)" : undefined,
+                  borderLeftColor: active_ ? "#e63946" : "transparent",
+                  backgroundColor: active_ ? "rgba(230,57,70,0.08)" : undefined,
                 }}
               >
                 <span style={{ color: active_ ? "#e63946" : "rgba(255,255,255,0.3)" }}>
