@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import Script from 'next/script';
+import sitenavLinks from "../data/site.json"
+import legalLinksData from "../data/legalLinks.json"
 
 // JSON-LD: datos estructurados de la empresa (SEO local)
 const organizationSchema = {
@@ -32,22 +34,14 @@ const organizationSchema = {
   ],
 };
 
-const navLinks = [
-  { href: '/',           label: 'Inicio' },
-  { href: '/nosotros',   label: 'Nosotros' },
-  { href: '/servicios',  label: 'Servicios' },
-  { href: '/portafolio', label: 'Portafolio' },
-  { href: '/clientes',   label: 'Clientes' },
-  { href: '/cobertura',  label: 'Cobertura' },
-  { href: '/contacto',   label: 'Contacto' },
-];
 
-const legalLinks = [
-  { href: '/aviso-de-privacidad',     label: 'Aviso de privacidad' },
-  { href: '/terminos-y-condiciones',  label: 'Términos y condiciones' },
-];
 
 export default function Footer() {
+
+  
+  const { navigation } = sitenavLinks; 
+  const { legalLinks } = legalLinksData;
+
   return (
     <>
       {/* JSON-LD inyectado en el <head> via next/script */}
@@ -106,7 +100,7 @@ export default function Footer() {
                 Navegación
               </h2>
               <ul className="space-y-3" role="list">
-                {navLinks.map(({ href, label }) => (
+                {navigation.map(({ href, label }) => (
                   <li key={href}>
                     {/*
                       Link de Next.js en lugar de <a>:
