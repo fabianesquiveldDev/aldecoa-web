@@ -1,0 +1,6 @@
+{
+    "legalLinks":[
+        { "href": "/aviso-de-privacidad",     "label": "Aviso de privacidad" },
+        { "href": "/terminos-y-condiciones",  "label": "Términos y condiciones" }
+    ]
+}
