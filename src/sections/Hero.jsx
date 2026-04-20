@@ -5,7 +5,7 @@ import site from "../data/site.json";
 import Image from "next/image"; // ← next/image para el poster
 
 export default function Hero() {
-  const { badge, description, title } = heroData;
+  const { badge, description, title, logo } = heroData;
   const contact = site.contact;
 
   return (
@@ -75,17 +75,17 @@ export default function Hero() {
           // ↓ añadido para accesibilidad y SEO
           aria-label="Video de presentación de ALDECOA"
         >
-          <div className="aspect-square bg-surface-container-highest relative overflow-hidden">
-
+          <div className="aspect-square bg-white dark:bg-white relative overflow-hidden">
             {/* ↓ poster como next/image para que Google pueda indexar la imagen
                 y mejora el LCP (Largest Contentful Paint) */}
             <Image
-              src="/images/hero.webp"
+              src={logo}
               alt="ALDECOA agencia de marketing y entretenimiento en el sur de México"
               fill
               priority           // ← LCP crítico, carga primero
-              className="object-cover"
+              className="object-contain p-10"
               sizes="(max-width: 1024px) 0px, 50vw"
+
             />
 
             <video
