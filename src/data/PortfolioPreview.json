@@ -1,38 +1,38 @@
 {
     "PortfolioPreview":[
         {
-            "image": "/images/portfolio/evento1.jpg",
-            "category": "Evento Corporativo",
-            "title": "Convención Anual 2024",
+            "image": "/portfolioPreview/produccion.webp",
+            "category": "Escenografia & Produccion",
+            "title": "Gestión de Audio Y Logística de Producción",
             "span": "md:col-span-2",
             "ratio": "aspect-video"
         },
 
         {
-            "image": "/images/portfolio/evento2.jpg",
-            "category": "Activación BTL",
+            "image": "/portfolioPreview/publicidadM.webp",
+            "category": "Publicidad & Marketing",
             "title": "",
             "ratio": "aspect-square"
         },
 
         {
-            "image": "/images/portfolio/evento3.jpg",
-            "category": "Producción",
+            "image": "/portfolioPreview/entretenimineto.webp",
+            "category": "Entretenimiento & Shows",
             "title": "",
             "ratio": "aspect-square"
         },
 
         {
-            "image": "/images/portfolio/evento4.jpg",
-            "category": "Trade Marketing",
+            "image": "/portfolioPreview/conferencia.webp",
+            "category": "Conferencias & Team Building",
             "title": "",
             "ratio": "aspect-square"
         },
 
         {
-            "image": "/images/portfolio/evento5.jpg",
-            "category": "Tecnología",
-            "title": "Foro Digital Innovación",
+            "image": "/portfolioPreview/infrestructurap.webp",
+            "category": "Infrestructura",
+            "title": "Renta De Palapa Grijalva Para Eventos",
             "span": "md:col-span-3",
             "ratio": "aspect-[21/9]"
         }
