@@ -83,7 +83,22 @@
         {
             "id_image": 21,
             "url": "/portafolio/p-21.webp"
+        },
+        {
+            "id_image": 23,
+            "url": "/portafolio/p-23.webp"
+        },
+        {
+            "id_image": 24,
+            "url": "/portafolio/p-24.webp"
+        },
+        {
+            "id_image": 25,
+            "url": "/portafolio/p-25.webp"
+        },
+        {
+            "id_image": 26,
+            "url": "/portafolio/p-26.webp"
         }
-
     ]
 }
