@@ -42,17 +42,20 @@ export default function PortfolioPreview() {
             >
               <Image
                 src={item.image}
-                // ↓ alt más descriptivo con contexto de la agencia
                 alt={`${item.title || item.category} — proyecto de ALDECOA`}
                 fill
-                loading="lazy" // ↓ quitar priority implícito, están debajo del fold
+                loading="lazy"
                 sizes="(max-width:768px) 100vw, 25vw"
                 className="
-                  object-cover grayscale hover:grayscale-0
-                  hover:scale-105 transition-all duration-700
+                  object-cover
+                  grayscale
+                  hover:grayscale-0
+                  transition-all duration-700
+                  hover:scale-105
+                  [filter:grayscale(100%)]
+                  [-webkit-filter:grayscale(100%)]
                 "
               />
-
               {/* overlay */}
               <div className="absolute bottom-0 left-0 w-full p-4 bg-black/60">
                 <p className="text-[10px] font-bold text-primary uppercase">
