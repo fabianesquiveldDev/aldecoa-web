@@ -21,5 +21,6 @@
   },
 
   "video": "/hero/Aldecoa_introduccion.mp4",
-  "logo": "/hero/aldecoa-Lo.webp"
+  "logo": "/hero/aldecoa-Lo.webp",
+  "imgMovil":"/hero/hero-movil.png"
 }
