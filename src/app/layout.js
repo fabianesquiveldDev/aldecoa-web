@@ -20,7 +20,7 @@ const manrope = Manrope({
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata = {
   title: {
-    default: "ALDECOA | Agencia de Marketing y Entretenimiento en el Sur de México",
+    default: "ALDECOA | Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
     template: "%s | ALDECOA",
   },
   description:
@@ -34,11 +34,10 @@ export const metadata = {
     "activaciones de marca",
     "agencia publicitaria Villahermosa",
     "ALDECOA",
+    "servicios integrales",
+    "estrategas de servicios integrales"
   ],
   metadataBase: new URL("https://www.aldecoa360.com"),
-  // ❌ ELIMINADO: alternates.canonical aquí — causaba que TODAS las páginas
-  // tuvieran canonical apuntando al home, lo que confunde a Google.
-  // El canonical se pone en cada page.js individualmente.
   robots: {
     index: true,
     follow: true,
@@ -53,15 +52,15 @@ export const metadata = {
     locale: "es_MX",
     url: "https://www.aldecoa360.com",
     siteName: "ALDECOA",
-    title: "ALDECOA | Agencia de Marketing y Entretenimiento en el Sur de México",
+    title: "ALDECOA |  Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
     description:
-      "Marketing, publicidad, entretenimiento y activaciones de marca para empresas en el sur de México.",
+      "Marketing, publicidad, entretenimiento, servivisios integrales y activaciones de marca para empresas en el sur de México.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ALDECOA Agencia de Marketing y Entretenimiento en el Sur de México",
+        alt: "ALDECOA Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
       },
     ],
   },
