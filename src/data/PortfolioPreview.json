@@ -1,7 +1,7 @@
 {
     "PortfolioPreview":[
         {
-            "image": "/portfolioPreview/produccion.png",
+            "image": "/portfolioPreview/produccion.webp",
             "category": "Escenografia & Produccion",
             "title": "Gestión de Audio Y Logística de Producción",
             "span": "md:col-span-2",
@@ -9,28 +9,28 @@
         },
 
         {
-            "image": "/portfolioPreview/publicidadM.jpg",
+            "image": "/portfolioPreview/publicidadM.webp",
             "category": "Publicidad & Marketing",
             "title": "",
             "ratio": "aspect-square"
         },
 
         {
-            "image": "/portfolioPreview/entretenimineto.jpg",
+            "image": "/portfolioPreview/entretenimineto.webp",
             "category": "Entretenimiento & Shows",
             "title": "",
             "ratio": "aspect-square"
         },
 
         {
-            "image": "/portfolioPreview/conferencia.jpg",
+            "image": "/portfolioPreview/conferencia.webp",
             "category": "Conferencias & Team Building",
             "title": "",
             "ratio": "aspect-square"
         },
 
         {
-            "image": "/portfolioPreview/infrestructurap.png",
+            "image": "/portfolioPreview/infrestructurap.webp",
             "category": "Infrestructura",
             "title": "Renta De Palapa Grijalva Para Eventos",
             "span": "md:col-span-3",
