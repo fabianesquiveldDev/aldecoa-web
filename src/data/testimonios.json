@@ -2,22 +2,22 @@
     "testimonios": [
         {
         "id": 1,
-        "testimonio": "La capacidad de ALDECOA para aterrizar conceptos complejos en ejecuciones impecables es lo que los diferencia del resto de las agencias.",
-        "cargo": "Director de Marketing",
-        "empresa": "Consumo Masivo"
+        "testimonio": "Trabajar con ALDECOA ha sido una experiencia altamente positiva. Durante el desarrollo del Tour Andatti México, demostraron una ejecución impecable, gran actitud en campo y una excelente conexión con el público. La sinergia lograda ha sido clave para el éxito de nuestras activaciones en la región.",
+        "cargo": "Region Tabasco",
+        "empresa": "ANDATTI MÉXICO"
         
         },
         {
         "id": 2,
-        "testimonio": "Su logística en el sureste no tiene comparación. Manejaron múltiples puntos simultáneos con una coordinación impecable.",
-        "cargo": "Gerente de Operaciones",
-        "empresa": "Retail Nacional"
+        "testimonio": "Es un aliado estratégico en la operación de nuestras activaciones. Su capacidad de respuesta, organización y ejecución en múltiples puntos al mismo tiempo nos da la confianza de que cada evento será un éxito. Su equipo entiende perfectamente la dinámica del retail.",
+        "cargo": "GERENTE DE OPERACIONES",
+        "empresa": "OXXO REGIÓN TABASCO"
         },
         {
         "id": 3,
-        "testimonio": "Buscábamos impacto y logramos una experiencia que conectó con nuestro público de manera memorable.",
-        "cargo": "CEO",
-        "empresa": "Startup"
+        "testimonio": "Hemos generado una sólida relación de trabajo en el sureste del país. Su profesionalismo, compromiso y atención al detalle han sido fundamentales para mantener nuestros estándares de servicio en la región. Son un equipo confiable y altamente resolutivo.",
+        "cargo": "Region Sureste",
+        "empresa": "TOTALPLAY MÉXICO"
         }
     ]
 }

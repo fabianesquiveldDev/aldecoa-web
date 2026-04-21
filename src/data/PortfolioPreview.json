@@ -7,34 +7,47 @@
             "span": "md:col-span-2",
             "ratio": "aspect-video"
         },
-
         {
             "image": "/portfolioPreview/publicidadM.webp",
             "category": "Publicidad & Marketing",
             "title": "",
             "ratio": "aspect-square"
         },
-
         {
             "image": "/portfolioPreview/entretenimineto.webp",
             "category": "Entretenimiento & Shows",
             "title": "",
             "ratio": "aspect-square"
         },
-
         {
             "image": "/portfolioPreview/conferTeam.webp",
             "category": "Conferencias & Team Building",
             "title": "",
             "ratio": "aspect-square"
         },
-
         {
             "image": "/portfolioPreview/infrestructurap.webp",
-            "category": "Infrestructura",
-            "title": "Renta De Palapa Grijalva Para Eventos",
+            "category": "Infraestructura",
+            "title": "Renta De Palapa Y Salones De Eventos",
             "span": "md:col-span-3",
             "ratio": "aspect-[21/9]"
+        },
+        {
+            "type": "video",
+            "videoId": "jrE3-DKPi-0",
+            "category": "Video - leo",
+            "title": "",
+            "span": "md:col-span-2",
+            "ratio": "aspect-video"
+        },
+        {
+            "type": "video",
+            "videoId": "0qZ-OX5zx6A",
+            "category": "Video - fabrica de los sueños",
+            "title": "",
+            "span": "md:col-span-2",
+            "ratio": "aspect-video"
         }
+        
     ]
 }
