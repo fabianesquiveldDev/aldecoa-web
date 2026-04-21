@@ -5,7 +5,7 @@
     {
       "id_client": 1,
       "name": "Volkswagen",
-      "logo": "/logos/volkswagen.webp"
+      "logo": "/logos/volkswagen-2.webp"
       
     },
     {
@@ -28,8 +28,8 @@
     },
     {
       "id_client": 5,
-      "name": "Schlumberger",
-      "logo": "/logos/Schlumberger.webp"
+      "name": "CodeSur",
+      "logo": "/logos/codesur.webp"
       
     },
     {
@@ -80,6 +80,27 @@
       "id_client": 14,
       "name": "Andatti",
       "logo": "/logos/Andatti.webp"
+    },
+    {
+      "id_client": 15,
+      "name": "Leo Restaurante",
+      "logo": "/logos/leo.webp"
+    },
+    {
+      "id_client": 16,
+      "name": "MoreTools",
+      "logo": "/logos/moreTools.webp"
+    },
+    {
+      "id_client": 17,
+      "name": "City Center Villahermosa",
+      "logo": "/logos/City-centerVH.webp"
+    },
+    {
+      "id_client": 18,
+      "name": "Galeria Tabasco Villahermosa",
+      "logo": "/logos/galeriasTab.webp"
     }
+    
   ]
 }
