@@ -130,9 +130,7 @@ export default function PortfolioMasPage() {
                 alt={getAlt(img, i)}
                 fill
                 sizes="(max-width: 640px) 100vw, 33vw"
-                className={`object-cover transition-all duration-700 group-hover:scale-105 pointer-events-none ${
-                  isTouch === false ? "grayscale group-hover:grayscale-0" : "grayscale-0"
-                }`}
+                className="object-cover transition-all duration-700 group-hover:scale-105 pointer-events-none"
               />
               <span
                 aria-hidden="true"

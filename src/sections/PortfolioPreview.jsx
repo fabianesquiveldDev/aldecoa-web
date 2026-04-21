@@ -54,9 +54,9 @@ function GridItem({ item }) {
         loading="lazy"
         sizes="(max-width:768px) 100vw, 25vw"
         className="
-          object-cover grayscale hover:grayscale-0
+          object-cover 
           transition-all duration-700 hover:scale-105
-          [filter:grayscale(100%)] [-webkit-filter:grayscale(100%)]
+         
         "
       />
       <div className="absolute bottom-0 left-0 w-full p-4 bg-black/60">

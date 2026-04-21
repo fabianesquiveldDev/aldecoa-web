@@ -129,7 +129,7 @@ export default function Hero() {
               loop
               playsInline
               preload="none"
-              className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              className="absolute inset-0 w-full h-full object-cover"
             >
               <source src={heroData.video} type="video/mp4" />
             </video>
