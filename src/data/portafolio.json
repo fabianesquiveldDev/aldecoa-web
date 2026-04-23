@@ -13,6 +13,22 @@
             "url": "/portafolio/p-3.webp"
         },
         {
+            "type": "video",
+            "videoId": "lS3CIres-oA",
+            "category": "Video - Apertura de oxxo Plaza Bugambilia",
+            "title": "",
+            "span": "md:col-span-2",
+            "ratio": "aspect-video"
+        },
+        {
+            "type": "video",
+            "videoId": "cU3uARI65Uw",
+            "category": "Video - Evento para CodeSur",
+            "title": "",
+            "span": "md:col-span-2",
+            "ratio": "aspect-video"
+        },
+        {
             "id_image": 4,
             "url": "/portafolio/p-4.webp"
         },
@@ -99,6 +115,35 @@
         {
             "id_image": 26,
             "url": "/portafolio/p-26.webp"
+        },
+         {
+            "id_image": 27,
+            "url": "/portafolio/p-27.webp"
+        },
+         {
+            "id_image": 28,
+            "url": "/portafolio/p-28.webp"
+        },
+         {
+            "id_image": 29,
+            "url": "/portafolio/p-29.webp"
+        },
+         {
+            "id_image": 30,
+            "url": "/portafolio/p-30.webp"
+        },
+         {
+            "id_image": 31,
+            "url": "/portafolio/p-31.webp"
+        },
+         {
+            "id_image": 32,
+            "url": "/portafolio/p-32.webp"
+        },
+         {
+            "id_image": 33,
+            "url": "/portafolio/p-33.webp"
         }
+
     ]
 }
