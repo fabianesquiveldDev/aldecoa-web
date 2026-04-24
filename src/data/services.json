@@ -185,6 +185,22 @@
       { "id_servicio": 73, "nombre": "Renta de palapa para eventos" },
       { "id_servicio": 74, "nombre": "Área con alberca" }
         ]
+    },
+    {
+      "id_seccion": 15,
+      "nombreSeccion": "Diseño y Desarrollo Web Estratégico",
+      "icon": "language",
+      "slug": "diseno-desarrollo-web",
+      "servicios": [
+        { "id_servicio": 75, "nombre": "Diseño web personalizado" },
+        { "id_servicio": 76, "nombre": "Sitios web responsivos (móvil, tablet y PC)" },
+        { "id_servicio": 77, "nombre": "Optimización de velocidad y rendimiento" },
+        { "id_servicio": 78, "nombre": "SEO básico para posicionamiento en buscadores" },
+        { "id_servicio": 79, "nombre": "Integración con Google Analytics" },
+        { "id_servicio": 80, "nombre": "Formularios de contacto y WhatsApp" },
+        { "id_servicio": 81, "nombre": "Diseño enfocado en conversión (leads)" },
+        { "id_servicio": 82, "nombre": "Configuración de Google Search Console e indexación en Google" }
+      ]
     }
-]
+  ]
 }

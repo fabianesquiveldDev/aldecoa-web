@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 import { Epilogue, Manrope } from "next/font/google";
+import Script from "next/script";
 
 const epilogue = Epilogue({
   subsets: ["latin"],
@@ -123,16 +124,26 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`dark ${epilogue.variable} ${manrope.variable}`}>
       <head>
-        {/*
-          JSON-LD va en <head>, no en <body>.
-          Next.js App Router permite poner <script> directamente aquí.
-          Antes estaba en <body> lo cual es técnicamente incorrecto.
-        */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-94S76767EP"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-94S76767EP');
+          `}
+        </Script>
+
+        {/* 🔍 JSON-LD (SEO) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
+
       <body className="font-manrope">
         <Navbar />
         {children}
