@@ -2,6 +2,8 @@
 import servicesData from "../../../data/services.json";
 import site from "../../../data/site.json";
 import Script from "next/script";
+import ServiceWhatsAppButton from "../../../components/ServiceWhatsAppButton";
+
 
 
 // ─── Pre-renderiza todas las rutas en build time ───────────────────────────
@@ -65,39 +67,7 @@ const WHATSAPP_ICON = (
 );
 
 // ─── Componentes ───────────────────────────────────────────────────────────
-function WhatsAppButton({ url, label, serviceName }) {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={`Solicitar información sobre ${serviceName} por WhatsApp`}
-      className="inline-flex items-center gap-3 transition-all duration-200 w-full md:w-auto justify-center md:justify-start"
-      style={{
-        background: "#dc2626",
-        color: "#fff",
-        padding: "15px 28px",
-        fontWeight: 900,
-        textTransform: "uppercase",
-        letterSpacing: "0.12em",
-        fontSize: 11,
-        borderRadius: 10,
-        border: "1px solid rgba(255,255,255,0.12)",
-        textDecoration: "none",
-        boxShadow: "0 10px 30px rgba(220,38,38,0.2)",
-      }}
-    >
-      <span
-        className="rounded-full flex items-center justify-center shrink-0"
-        style={{ background: "rgba(255,255,255,0.18)", width: 30, height: 30 }}
-      >
-        {WHATSAPP_ICON}
-      </span>
-      <span>{label}</span>
-      <span style={{ fontSize: 16, fontWeight: 900 }} aria-hidden="true">→</span>
-    </a>
-  );
-}
+
 
 function SectionLabel({ text }) {
   return (
@@ -243,7 +213,6 @@ export default async function Page({ params }) {
                 >
                   <li itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
                     <a
-                      href="/servicios"
                       itemProp="item"
                       style={{ textDecoration: "none" }}
                     >
@@ -379,7 +348,7 @@ export default async function Page({ params }) {
               </p>
             </div>
 
-            <WhatsAppButton
+            <ServiceWhatsAppButton
               url={whatsappUrl}
               label="Solicitar información"
               serviceName={nombreSeccion}

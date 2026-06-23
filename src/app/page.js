@@ -15,10 +15,10 @@ export const metadata = {
   // AHORA: título completo y descriptivo para Google
   // El home es la página más importante — no debe usar el template
   title: {
-    absolute: "ALDECOA |  Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
+    absolute: "ALDECOA 360 |  Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
   },
   description:
-    "ALDECOA es la agencia líder en el sur de México especializada en marketing, publicidad, entretenimiento, shows promocionales y activaciones de marca. Hacemos crecer tu negocio.",
+    "ALDECOA 360 es la agencia líder en el sur de México especializada en marketing, publicidad, entretenimiento, shows promocionales y activaciones de marca. Hacemos crecer tu negocio.",
   keywords: [
     "agencia de marketing sur de México",
     "publicidad Tabasco",
@@ -27,14 +27,14 @@ export const metadata = {
     "shows promocionales México",
     "activaciones de marca",
     "agencia publicitaria Villahermosa",
-    "ALDECOA",
+    "ALDECOA 360",
   ],
   alternates: {
     canonical: "https://www.aldecoa360.com",
   },
   openGraph: {
     url: "https://www.aldecoa360.com",
-    title: "ALDECOA | Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
+    title: "ALDECOA 360 | Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
     description:
       "Marketing, publicidad, entretenimiento y activaciones de marca para empresas en el sur de México.",
   },
@@ -44,14 +44,14 @@ export const metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "ALDECOA | Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
+  name: "ALDECOA 360 | Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
   url: "https://www.aldecoa360.com",
   description:
     "Agencia líder en marketing, publicidad, entretenimiento y shows promocionales en el sur de México.",
   inLanguage: "es-MX",
   isPartOf: {
     "@type": "WebSite",
-    name: "ALDECOA",
+    name: "ALDECOA 360",
     url: "https://www.aldecoa360.com",
   },
 };

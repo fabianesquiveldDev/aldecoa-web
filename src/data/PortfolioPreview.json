@@ -1,14 +1,14 @@
 {
     "PortfolioPreview":[
         {
-            "image": "/portfolioPreview/produccion.webp",
+            "image": "/portfolioPreview/Eproduccion.webp",
             "category": "Escenografia & Produccion",
             "title": "Gestión de Audio Y Logística de Producción",
             "span": "md:col-span-2",
             "ratio": "aspect-video"
         },
         {
-            "image": "/portfolioPreview/publicidadM.webp",
+            "image": "/portfolioPreview/publicidadMk.webp",
             "category": "Publicidad & Marketing",
             "title": "",
             "ratio": "aspect-square"
