@@ -25,15 +25,14 @@ const ContactIcon = ({ icon, href, children }) => {
   );
 };
 
+
 function formatPhone(phone) {
   const local = phone.replace(/^52/, "");
   return local.replace(/(\d{3})(\d{3})(\d{4})/, "$1 $2 $3");
 }
-
 export default function Contacto() {
   const { contact, social } = site;
 
-  
   const SOCIALS = [
     {
       href: "#",
