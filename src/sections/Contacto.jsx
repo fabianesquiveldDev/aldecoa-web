@@ -33,6 +33,7 @@ function formatPhone(phone) {
 export default function Contacto() {
   const { contact, social } = site;
 
+  
   const SOCIALS = [
     {
       href: "#",
