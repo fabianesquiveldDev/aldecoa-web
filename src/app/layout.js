@@ -21,11 +21,11 @@ const manrope = Manrope({
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata = {
   title: {
-    default: "ALDECOA | Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
-    template: "%s | ALDECOA",
+    default: "ALDECOA 360 | Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
+    template: "%s | ALDECOA 360",
   },
   description:
-    "ALDECOA es la agencia líder en el sur de México especializada en marketing, publicidad, entretenimiento, shows promocionales y activaciones de marca.",
+    "ALDECOA 360 es la agencia líder en el sur de México especializada en marketing, publicidad, entretenimiento, shows promocionales y activaciones de marca.",
   keywords: [
     "agencia de marketing sur de México",
     "publicidad Tabasco",
@@ -34,7 +34,7 @@ export const metadata = {
     "shows promocionales México",
     "activaciones de marca",
     "agencia publicitaria Villahermosa",
-    "ALDECOA",
+    "ALDECOA 360",
     "servicios integrales",
     "estrategas de servicios integrales"
   ],
@@ -52,8 +52,8 @@ export const metadata = {
     type: "website",
     locale: "es_MX",
     url: "https://www.aldecoa360.com",
-    siteName: "ALDECOA",
-    title: "ALDECOA |  Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
+    siteName: "ALDECOA 360",
+    title: "ALDECOA 360 |  Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
     description:
       "Marketing, publicidad, entretenimiento, servivisios integrales y activaciones de marca para empresas en el sur de México.",
     images: [
@@ -61,13 +61,13 @@ export const metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ALDECOA Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
+        alt: "ALDECOA 360 Agencia de Marketing y Estrategas de servicios Integrales en el Sur de México",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ALDECOA | Agencia de Marketing y Entretenimiento en el Sur de México",
+    title: "ALDECOA 360 | Agencia de Marketing y Entretenimiento en el Sur de México",
     description:
       "Marketing, publicidad, entretenimiento y activaciones de marca para empresas en el sur de México.",
     images: ["/og-image.jpg"],

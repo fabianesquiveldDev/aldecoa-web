@@ -4,6 +4,7 @@
       "id_seccion": 1,
       "nombreSeccion": "Marketing & Publicidad",
       "icon": "campaign",
+      "img":"/servicios/1.webp",
       "slug": "marketing-publicidad",
       "servicios": [
         { "id_servicio": 1, "nombre": "Estrategias 360°" },
@@ -21,6 +22,7 @@
       "id_seccion": 2,
       "nombreSeccion": "Promoción & Activaciones",
       "icon": "storefront",
+      "img":"/servicios/2.webp",
       "slug": "promocion-activaciones",
       "servicios": [
         { "id_servicio": 10, "nombre": "Activaciones en punto de venta" },
@@ -36,6 +38,7 @@
       "id_seccion": 3,
       "nombreSeccion": "Eventos & Experiencias",
       "icon": "event",
+      "img":"/servicios/3.webp",
       "slug": "eventos-experiencias",
       "servicios": [
         { "id_servicio": 17, "nombre": "Eventos corporativos" },
@@ -49,6 +52,7 @@
       "id_seccion": 4,
       "nombreSeccion": "Eventos Sociales",
       "icon": "celebration",
+      "img":"/servicios/4.webp",
       "slug": "eventos-sociales",
       "servicios": [
         { "id_servicio": 22, "nombre": "Bodas" },
@@ -62,6 +66,7 @@
       "id_seccion": 5,
       "nombreSeccion": "Eventos Infantiles",
       "icon": "toys",
+      "img":"/servicios/5.webp",
       "slug": "eventos-infantiles",
       "servicios": [
         { "id_servicio": 27, "nombre": "Fiestas temáticas" },
@@ -75,6 +80,7 @@
       "id_seccion": 6,
       "nombreSeccion": "Entretenimiento & Shows",
       "icon": "theater_comedy",
+      "img":"/servicios/6.webp",
       "slug": "entretenimiento-shows",
       "servicios": [
         { "id_servicio": 32, "nombre": "Shows teatrales" },
@@ -87,6 +93,7 @@
       "id_seccion": 7,
       "nombreSeccion": "Producción de Eventos",
       "icon": "theater_comedy",
+      "img":"/servicios/7.webp",
       "slug": "produccion-eventos",
       "servicios": [
         { "id_servicio": 36, "nombre": "Teatro" },
@@ -100,6 +107,7 @@
       "id_seccion": 8,
       "nombreSeccion": "Digital & Redes Sociales",
       "icon": "public",
+      "img":"/servicios/8.webp",
       "slug": "digital-redes-sociales",
       "servicios": [
         { "id_servicio": 41, "nombre": "Gestión de redes sociales" },
@@ -114,6 +122,7 @@
       "id_seccion": 9,
       "nombreSeccion": "Transportación",
       "icon": "directions_car",
+      "img":"/servicios/9.webp",
       "slug": "transportacion",
       "servicios": [
         { "id_servicio": 47, "nombre": "Vans de 14 a 20 pasajeros" },
@@ -126,6 +135,7 @@
       "id_seccion": 10,
       "nombreSeccion": "Conferencias & Team Building",
       "icon": "groups",
+      "img":"/servicios/10.webp",
       "slug": "conferencias-team-building",
       "servicios": [
         { "id_servicio": 51, "nombre": "Conferencias motivacionales" },
@@ -139,6 +149,7 @@
       "id_seccion": 11,
       "nombreSeccion": "Escenografía & Producción",
       "icon": "architecture",
+      "img":"/servicios/11.webp",
       "slug": "escenografia-produccion",
       "servicios": [
         { "id_servicio": 56, "nombre": "Diseño de sets y escenografías" },
@@ -152,6 +163,7 @@
     "id_seccion": 12,
     "nombreSeccion": "Producción Creativa",
     "icon": "brush",
+    "img":"/servicios/12.webp",
     "slug": "produccion-creativa",
     "servicios": [
       { "id_servicio": 61, "nombre": "Spots de radio y TV" },
@@ -165,6 +177,7 @@
     "id_seccion": 13,
     "nombreSeccion": "Renta & Servicios para Eventos",
     "icon": "event_available",
+    "img":"/servicios/13.webp",
     "slug": "renta-servicios-eventos",
     "servicios": [
       { "id_servicio": 66, "nombre": "Audio profesional" },
@@ -180,6 +193,7 @@
     "id_seccion": 14,
     "nombreSeccion": "Renta de palapas y salones de eventos",
     "icon": "villa",
+    "img":"/servicios/14.webp",
     "slug": "infraestructura-propia",
     "servicios": [
       { "id_servicio": 73, "nombre": "Renta de palapa para eventos" },
@@ -190,6 +204,7 @@
       "id_seccion": 15,
       "nombreSeccion": "Diseño y Desarrollo Web Estratégico",
       "icon": "language",
+      "img":"/servicios/15.webp",
       "slug": "diseno-desarrollo-web",
       "servicios": [
         { "id_servicio": 75, "nombre": "Diseño web personalizado" },

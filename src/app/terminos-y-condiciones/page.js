@@ -10,7 +10,7 @@ export default function TerminosCondiciones() {
 
 
       <p className="text-white/70 leading-relaxed mb-6">
-        El presente sitio web tiene como objetivo proporcionar información sobre los servicios ofrecidos por ALDECOA,
+        El presente sitio web tiene como objetivo proporcionar información sobre los servicios ofrecidos por ALDECOA 360,
         Estrategas de Servicios Integrales, incluyendo soluciones de marketing, producción audiovisual, activaciones de
         marca, organización de eventos y estrategias publicitarias.
       </p>
@@ -23,7 +23,7 @@ export default function TerminosCondiciones() {
 
 
       <p className="text-white/70 leading-relaxed mb-6">
-        ALDECOA no garantiza resultados específicos derivados de la contratación de servicios, ya que estos pueden variar
+        ALDECOA 360 no garantiza resultados específicos derivados de la contratación de servicios, ya que estos pueden variar
         dependiendo de los objetivos, presupuesto y condiciones particulares de cada proyecto.
       </p>
 

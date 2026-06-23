@@ -88,3 +88,12 @@ body {
 .footer-link{
   @apply text-zinc-400 text-sm transition-colors hover:text-red-600;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

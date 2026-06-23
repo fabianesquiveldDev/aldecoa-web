@@ -132,7 +132,11 @@ export default function PortfolioMasPage() {
           <span className="text-white/30">· Aldecoa 360</span>
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/*
+          MOBILE: grilla compacta 2 columnas, cards cuadradas (grid-cols-2 + aspect-square).
+          DESKTOP/TABLET (sm+): vuelve al grid original sin cambios.
+        */}
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {imagenes.map((img, i) => {
             const itemIsVideo = isVideo(img);
 
@@ -151,7 +155,11 @@ export default function PortfolioMasPage() {
                     ? `Ver proyecto: ${img.nombre}`
                     : `Ver proyecto ${i + 1}`
                 }
-                className="relative aspect-[7/5] overflow-hidden bg-surface-container group cursor-pointer select-none w-full p-0 border-0"
+                className="
+                  relative overflow-hidden bg-surface-container group cursor-pointer select-none w-full p-0 border-0
+                  aspect-square
+                  sm:aspect-[7/5]
+                "
               >
                 {/* ── Thumbnail ── */}
                 {itemIsVideo ? (
@@ -161,7 +169,7 @@ export default function PortfolioMasPage() {
                       src={ytThumb(img.videoId)}
                       alt={getAlt(img, i)}
                       fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-all duration-700 group-hover:scale-105 pointer-events-none"
                     />
 
@@ -188,7 +196,7 @@ export default function PortfolioMasPage() {
                       src={img.url}
                       alt={getAlt(img, i)}
                       fill
-                      sizes="(max-width: 640px) 100vw, 33vw"
+                      sizes="(max-width: 640px) 50vw, 33vw"
                       className="object-cover transition-all duration-700 group-hover:scale-105 pointer-events-none"
                     />
                     <span

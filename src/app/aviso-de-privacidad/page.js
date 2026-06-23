@@ -10,7 +10,7 @@ export default function AvisoPrivacidad() {
 
 
       <p className="text-white/70 leading-relaxed mb-6">
-        En ALDECOA, Estrategas de Servicios Integrales, respetamos y protegemos la privacidad de nuestros clientes,
+        En ALDECOA 360, Estrategas de Servicios Integrales, respetamos y protegemos la privacidad de nuestros clientes,
         prospectos y usuarios. La información personal recopilada a través de nuestro sitio web será utilizada únicamente
         para fines de contacto, seguimiento de solicitudes, cotización de servicios y mejora de la experiencia del usuario.
       </p>
@@ -24,7 +24,7 @@ export default function AvisoPrivacidad() {
 
 
       <p className="text-white/70 leading-relaxed mb-6">
-        ALDECOA no comparte, vende ni distribuye información personal a terceros sin autorización expresa del titular,
+        ALDECOA 360 no comparte, vende ni distribuye información personal a terceros sin autorización expresa del titular,
         salvo cuando sea requerido por disposición legal.
       </p>
 

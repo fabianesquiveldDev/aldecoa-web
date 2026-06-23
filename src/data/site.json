@@ -1,6 +1,6 @@
 {
   "company": {
-    "name": "ALDECOA",
+    "name": "ALDECOA 360",
     "tagline": "Estrategas de Servicios Integrales",
     "slogan": "Let's Get Creative",
     "description": "Somos una agencia integral de mercadotecnia y eventos especializada en crear experiencias estratégicas que generan impacto real en la audiencia.",
@@ -15,9 +15,10 @@
   },
 
   "social": {
-    "facebook": "aldecoamkt",
+    "facebook": "aldecoa360",
     "instagram": "",
-    "linkedin": ""
+    "linkedin": "",
+    "youtube": "Aldecoa360Med"
   },
 
   "location": {
@@ -80,7 +81,7 @@
   ],
 
   "seo": {
-    "title": "ALDECOA | Marketing y Eventos en el Sureste de México",
+    "title": "ALDECO 360 | Marketing y Eventos en el Sureste de México",
     "description": "Agencia integral de marketing, activaciones BTL, eventos corporativos y producción audiovisual en el sureste de México.",
     "keywords": [
       "marketing BTL",
@@ -94,6 +95,6 @@
   },
   
   "logo":{
-    "src":"/logos/icon.png"
+    "src":"/logos/tu.png"
   }
 }
